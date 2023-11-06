@@ -4,15 +4,10 @@ layout: page
 permanantlink: /About/
 ---
 
-![Jardim Botânico, Curitiba](https://raw.githubusercontent.com/sergiokopplin/koppl.in/gh-pages/assets/images/blog/01-22/29-01.jpg){: class="bigger-image" }
+![Zoe](https://raw.githubusercontent.com/zoezxrli/zoezxrli.github.io/gh-pages/assets/images/portrait.png){: class="bigger-image" }
 
-<figcaption class="caption">Pic by Bia</figcaption>
+<figcaption class="caption">Pic by Zoe</figcaption>
 
 ---
 
-Hello, I am Sérgio Aragão Kopplin, 30+ and married.
-Working as Frontend Developer for [Alpha Sights](https://www.alphasights.com/) since 2023.
-
-In free time, musician.
-Discipleship and Leadership at Presbiterian Church.
-
+TBA

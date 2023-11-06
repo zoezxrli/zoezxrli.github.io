@@ -5,7 +5,7 @@ pagination:
     enabled: true
 permanantlink: /Projects/
 ---
-
+<!-- 
 <section class="list">
     {% for post in site.posts %}
         {% if post.projects %}
@@ -13,4 +13,16 @@ permanantlink: /Projects/
         {% endif %}
     {% endfor %}
 </section>
+ -->
 
+
+<section class="list">
+    {% if site.posts.size == 0 %}
+    <p class="text-center">Nothing published yet!</p>
+    {% elsif site.pagination.enabled %} {% for post in paginator.posts %} {% if
+    post.category == 'blog' %} {% if post.hidden != true %} {% include
+    blog-post.html %} {% endif %} {% endif %} {% endfor %} {% include
+    pagination.html%} {% else %} {% for post in site.posts %} {% if
+    post.category == 'blog' %} {% if post.hidden != true %} {% include
+    blog-post.html %} {% endif %} {% endif %} {% endfor %} {% endif %}
+</section>
