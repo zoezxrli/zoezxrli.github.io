@@ -1,0 +1,16 @@
+---
+layout: page
+title: Projects
+pagination:
+    enabled: true
+permanantlink: /Projects/
+---
+
+<section class="list">
+    {% for post in site.posts %}
+        {% if post.projects %}
+            {% include blog-post.html %}
+        {% endif %}
+    {% endfor %}
+</section>
+
