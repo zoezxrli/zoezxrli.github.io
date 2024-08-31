@@ -4,7 +4,7 @@ title: Zhuoxinran Li
 bio: Frontend Developer that plays drums on weekends
 
 # twitter summary info
-description: My personal page, Sérgio Aragão Kopplin
+description: My personal page, Zhuoxinran Li
 
 # if it's an external image, update below for true
 # better with square images
@@ -49,13 +49,13 @@ authors:
     name: John Doe
     bio: A Man who travels the world eating noodles
     external-image: false
-    picture: assets/images/profile.jpg
+    picture: assets/images/juanjuan.gif
     twitter: johndoe
   jamesfoster:
     name: James Foster
     bio: A Man who develops software with coffee
     external-image: false
-    picture: assets/images/james.jpg
+    picture: assets/images/juanjuan.gif
     twitter: jamesfoster
 
 # do you want a larger site? change the option below
