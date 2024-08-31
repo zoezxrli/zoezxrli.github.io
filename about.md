@@ -8,6 +8,5 @@ permanantlink: /About/
 
 <figcaption class="caption">Pic by Zoe</figcaption>
 
----
 
 TBA: Add description about yourself.
