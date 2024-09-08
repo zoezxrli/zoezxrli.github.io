@@ -5,6 +5,7 @@ pagination:
     enabled: true
 permanantlink: /Projects/
 ---
+
 <!-- 
 <section class="list">
     {% for post in site.posts %}
@@ -13,7 +14,6 @@ permanantlink: /Projects/
         {% endif %}
     {% endfor %}
 </section>
- -->
 
 
 <section class="list">
@@ -25,4 +25,131 @@ permanantlink: /Projects/
     pagination.html%} {% else %} {% for post in site.posts %} {% if
     post.category == 'blog' %} {% if post.hidden != true %} {% include
     blog-post.html %} {% endif %} {% endif %} {% endfor %} {% endif %}
-</section>
+</section> -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Maps with Dividers</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .map-container {
+            width: 100%;                /* Set width to 90% of viewport */
+            height: 80vh;               /* Set height to 80% of viewport */
+            max-width: 1000px;          /* Optional: Set max width */
+            margin: 0 auto;             /* Center the maps */
+            border: none;               /* Remove border for a clean look */
+        }
+
+        .app-container {
+            width: 100%;              /* Set the width to fill the parent container */
+            height: 100%;             /* Set the height to fill the parent container */
+            border: none;             /* Remove the border for a clean look */
+        }
+
+        .iframe-wrapper {
+            width: 100%;              /* Set the width to 90% of the viewport width */
+            height: 90vh;             /* Set the height to 90% of the viewport height */
+            max-width: 1000px;        /* Optional: Set a maximum width */
+            max-height: 800px;        /* Optional: Set a maximum height */
+        }
+
+        .divider {
+            width: 100%;                /* Set width to 90% of viewport */
+            height: 2px;                /* Divider height */
+            background-color: #ddd;     /* Divider color */
+            margin: 30px auto;          /* Center and add spacing around divider */
+        }
+
+        .map-section {
+            margin-bottom: 50px;        /* Add space below each map section */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Table of Contents -->
+<nav>
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#project1">1. Spatial Analysis Projects</a></li>
+        <ul>
+            <li><a href="#project1.1">Project 1.1 </a></li>
+        </ul>
+        <li><a href="#project2">2. Visualizaiton Projects</a></li>
+        <ul>
+            <li><a href="#project2.1">Project 2.1</a></li>
+            <li><a href="#project2.2">Project 2.2</a></li>
+            <li><a href="#project2.3">Project 2.3</a></li>
+        </ul>
+    </ul>
+</nav>
+
+
+<h1 id="project1">1. Spatial Analysis Projects</h1>
+
+<h2>1.1 Chicago 77 neighbourhoods Livability</h2>
+<div class="map-section" id="project1.1">
+    <img src="/assets/images/Chicago_livability.jpg" alt="Chicago livability" width="100%">
+</div>
+
+
+
+<h1 id="project2">2 Visualization Projects</h1>
+
+<!-- Map 1: DAshboard -->
+<h2 id="project2.1">2.1 Toronto Child Care & Transit Proximity Dashboard</h2>
+
+<!-- Embed ArcGIS Dashboard -->
+<div class="map-section">
+    <iframe 
+        class="map-container"
+        src="https://www.arcgis.com/apps/dashboards/b5121dec467b4886b853cfa380b91ec5"  <!-- Replace with your actual dashboard URL -->
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- Dashboard Description -->
+<div class="description">
+    <p>This dashboard provides a comprehensive overview of key geographical data insights. It includes various maps, charts, and interactive elements to help you understand the spatial distribution and patterns of the data.</p>
+</div>
+
+<!-- Divider -->
+<div class="divider"></div>
+
+
+<!-- Map 2: Dashboard -->
+<h2 id="project2.2">2.2 Toronto Health Services Map with Language-Based Selection</h2>
+
+<!-- Embed ArcGIS Dashboard -->
+<div class="map-section">
+    <iframe 
+        class="map-container"
+        src="https://www.arcgis.com/apps/dashboards/1ad2f8f36fca438ca6d92ce40a5ac71e"  <!-- Replace with your actual dashboard URL -->
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- Divider -->
+<div class="divider"></div>
+
+
+<!-- Map 3: ArcGIS Instant App -->
+<h2 id="project2.3">2.3 Toronto Tornado Track Animation</h2>
+
+<div class="iframe-wrapper">
+    <!-- Embed ArcGIS Instant App -->
+    <iframe 
+        class="app-container"
+        src="https://utoronto.maps.arcgis.com/apps/instant/slider/index.html?appid=c67dc29fd9594821873c38518a13ee00"  <!-- Replace with your actual Instant App URL -->
+        allowfullscreen>
+    </iframe>
+</div>
+
+</body>
