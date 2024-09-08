@@ -1,7 +1,7 @@
 # main text of home
 name: Zhuoxinran
-title: Zhuoxinran Li
-bio: Frontend Developer that plays drums on weekends
+title: Hi !  This is Zoe 👋
+bio: Official name as Zhuoxinran Li, a fourth-year student interested in urban issues and spatial analysis, who also enjoys bartending on weekends.
 
 # twitter summary info
 description: My personal page, Zhuoxinran Li
@@ -19,7 +19,7 @@ dark-theme: false
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://raw.githubusercontent.com/sergiokopplin/koppl.in/gh-pages/assets/images/resume-sergio-kopplin.pdf
+resume-url: assets/images/ZhuoxinranLi_Resume.pdf
 
 url: https://zoezxrli.github.io/
 
