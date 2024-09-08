@@ -21,13 +21,9 @@ resume: true
 resume-external: true
 resume-url: https://raw.githubusercontent.com/sergiokopplin/koppl.in/gh-pages/assets/images/resume-sergio-kopplin.pdf
 
-url: https://koppl.in
-# your url: https://USERNAME.github.io
+url: https://zoezxrli.github.io/
 
 permalink: /:title/
-
-# To enable google analytics, supply your token below
-analytics-google: 'UA-165322929-1'
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
