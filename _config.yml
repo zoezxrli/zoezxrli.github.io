@@ -1,5 +1,5 @@
 # main text of home
-name: Zhuoxinran
+name: Zhuoxinran Li
 title: Hi !  This is Zoe 👋
 bio: Official name as Zhuoxinran Li, a fourth-year student interested in urban issues and spatial analysis, who also enjoys bartending on weekends.
 
@@ -19,7 +19,7 @@ dark-theme: false
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: assets/images/ZhuoxinranLi_Resume.pdf
+resume-url: /assets/ZhuoxinranLi_Resume.pdf
 
 url: https://zoezxrli.github.io/
 
@@ -41,18 +41,18 @@ email: zhuoxinran.li@mail.utoronto.ca
 # youtube: xxx
 
 authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
+  Zhuoxinran Li:
+    name: Zhuoxinran Li
+    bio: Me
     external-image: false
     picture: assets/images/juanjuan.gif
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/juanjuan.gif
-    twitter: jamesfoster
+
+  # jamesfoster:
+  #   name: James Foster
+  #   bio: A Man who develops software with coffee
+  #   external-image: false
+  #   picture: assets/images/juanjuan.gif
+  #   twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
