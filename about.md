@@ -3,12 +3,16 @@ title: About
 layout: page
 permanantlink: /About/
 ---
-
-![Zoe](https://zoezxrli.github.io/assets/images/juanjuan.gif){: class="big-image" }
-
-<figcaption class="caption">Pic by Zoe</figcaption>
----
 <div class="about-content">  <!-- New wrapper for dot pattern -->
-TBA: Add description about your Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<!-- New image added at the beginning of the content -->
+<img src="/assets/images/profile.jpg" alt="New Image" class="intro-image">
+
+<p>Hi there,<br>
+I'm Zoe—great to meet you!</p>
+
+<p>I'm a fourth-year student at the University of Toronto, majoring in Human Geography with a minor in GIS and Environmental Studies. My passion lies in urban issues, especially improving the quality of life for marginalized communities in cities. This focus began during my Urban Studies at Concordia University.</p>
+
+<p>On my projects page, you'll find ongoing and upcoming projects related to urban marginalization. Additionally, I’m independently developing data skills, including data engineering—currently pursuing the IBM Data Engineering Professional Certificate on Coursera—and exploring machine learning techniques to work with urban datasets in the future.</p>
+
 
 </div>
