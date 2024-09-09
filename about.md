@@ -1,11 +1,11 @@
 ---
-title: About
+name: About
 layout: page
 permanantlink: /About/
 ---
 <div class="about-content">  <!-- New wrapper for dot pattern -->
 <!-- New image added at the beginning of the content -->
-<img src="assets/images/profile.jpg" alt="New Image" class="intro-image">
+<img src="/assets/images/profile.jpg" alt="New Image" class="intro-image">
 
 <p>Hi there,<br>
 I'm Zoe—great to meet you!</p>
