@@ -4,6 +4,14 @@ layout: compress
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Title tag for setting dynamic page titles -->
+    <title>
+        {% if page.title %}
+            {{ page.title }} | {{ site.name }}
+        {% else %}
+            {{ site.title }} | {{ site.name }}
+        {% endif %}
+    </title>
 
     {% if site.analytics-google %}
         {% include analytics-google.html %}
@@ -18,7 +26,7 @@ layout: compress
     {% include favicon.html %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" name="{{ site.name }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+    <link rel="alternate" type="application/rss+xml" name="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
 
@@ -47,9 +55,9 @@ layout: compress
             <div class="post">
         {% else %}
             {% if showHeader != true %}
-                <div class="page {{ page.name | downcase }}">
+                <div class="page {{ page.title | downcase }}">
             {% else %}
-                <div class="{{ page.name | downcase }}">
+                <div class="{{ page.title | downcase }}">
             {% endif %}
         {% endif %}
 
