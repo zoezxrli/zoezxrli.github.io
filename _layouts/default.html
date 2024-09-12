@@ -51,6 +51,23 @@ layout: compress
 
     {{ scss_sheet | scssify }}
     </style>
+    
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Zhuoxinran Li",
+          "url": "{{ site.url }}",
+          "sameAs": [
+            "https://www.linkedin.com/in/zhuoxinran-li",
+            "https://twitter.com/zhuoxinran_li"
+          ],
+          "description": "Personal website of Zhuoxinran Li, showcasing projects, blogs, and about me."
+        }
+        </script>
+    
+        <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
