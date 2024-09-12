@@ -13,20 +13,24 @@ layout: compress
         {% endif %}
     </title>
 
+    <!-- Meta tags are important for SEO and help search engines understand the content and relevance of your website. -->
     {% if site.analytics-google %}
         {% include analytics-google.html %}
     {% endif %}
 
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name=author content="{{ site.name }}">
+    <meta name="author" content="Zhuoxinran Li">
+    <meta name="description" content="The personal website of Zhuoxinran Li featuring projects, blogs, and about me sections.">
+    <meta name="keywords" content="Zhuoxinran Li, personal website, projects, blogs, about me">
+    <meta name="robots" content="index, follow">
 
     {% seo %}
 
     {% include favicon.html %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" name="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+    <link rel="alternate" type="application/rss+xml" name="{{ site.name }}" href="{{ site.url }}{{ "/feed.xml" }}" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
 
