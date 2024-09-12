@@ -31,125 +31,85 @@ permanantlink: /Projects/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Maps with Dividers</title>
+    <title>Projects Overview</title>
     <style>
         body {
             margin: 0;
             padding: 0;
         }
 
-        .map-container {
-            width: 100%;                /* Set width to 90% of viewport */
-            height: 80vh;               /* Set height to 80% of viewport */
-            max-width: 1000px;          /* Optional: Set max width */
-            margin: 0 auto;             /* Center the maps */
-            border: none;               /* Remove border for a clean look */
+        .content-container {
+            max-width: 800px;  /* Limit the width of the content */
+            margin: 0 auto;  /* Center the content */
+            padding: 20px;  /* Add padding for spacing */
+            text-align: center;  /* Center-align the text */
         }
 
-        .app-container {
-            width: 100%;              /* Set the width to fill the parent container */
-            height: 100%;             /* Set the height to fill the parent container */
-            border: none;             /* Remove the border for a clean look */
+        .toc h2 {
+            color: #333;  /* Change the color of the TOC heading */
+            font-size: 2.5rem;  /* Resize TOC heading */
         }
 
-        .iframe-wrapper {
-            width: 100%;              /* Set the width to 90% of the viewport width */
-            height: 90vh;             /* Set the height to 90% of the viewport height */
-            max-width: 1000px;        /* Optional: Set a maximum width */
-            max-height: 800px;        /* Optional: Set a maximum height */
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0; /* Remove default margin */
+            text-align: left; /* Left-align the list items */
+            display: inline-block; /* Align list items left while keeping centered block */
+        }
+
+        .toc ul ul {
+            padding-left: 20px;  /* Indent nested lists */
+        }
+
+        .toc li {
+            color: #555;  /* Change the text color */
+            font-size: 1.6rem;  /* Change the text size */
+            margin-bottom: 10px;  /* Add space between list items */
+        }
+
+        .toc a {
+            text-decoration: none;
+            color: #0077cc;  /* Link color */
+            font-weight: bold;  /* Make the link text bold */
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
         }
 
         .divider {
-            width: 100%;                /* Set width to 90% of viewport */
-            height: 2px;                /* Divider height */
-            background-color: #ddd;     /* Divider color */
-            margin: 30px auto;          /* Center and add spacing around divider */
+            width: 100%;  /* Set width to 90% of viewport */
+            height: 2px;  /* Divider height */
+            background-color: #ddd;  /* Divider color */
+            margin: 30px auto;  /* Center and add spacing around divider */
         }
 
         .map-section {
-            margin-bottom: 50px;        /* Add space below each map section */
+            margin-bottom: 50px;  /* Add space below each map section */
         }
     </style>
 </head>
 
 <body>
 
-<!-- Table of Contents -->
-<nav>
-    <h2>Contents</h2>
-    <ul>
-        <li><a href="#project1">1. Spatial Analysis Projects</a></li>
+<div class="content-container">
+    <!-- Table of Contents -->
+    <nav class="toc">
+        <h2>Contents</h2>
         <ul>
-            <li><a href="#project1.1">Project 1.1 </a></li>
+            <li>1. Spatial Analysis Projects</li>
+            <ul>
+                <li><a href="/projects/chicago-livability/">1.1 Chicago 77 Neighbourhoods Livability</a></li>  <!-- Link updated -->
+            </ul>
+            <li>2. Visualization Projects</li>
+            <ul>
+                <li><a href="/projects/toronto-child-care-transit/">2.1 Toronto Child Care & Transit Proximity Dashboard</a></li>  <!-- Link updated -->
+                <li><a href="/projects/toronto-health-service-map/">2.2 Toronto Health Services Map with Language-Based Selection</a></li>  <!-- Link to another new page -->
+                <li><a href="/projects/toronto-tornado-track/">2.3 Toronto Tornado Track Animation</a></li>  <!-- Link to another new page -->
+            </ul>
         </ul>
-        <li><a href="#project2">2. Visualizaiton Projects</a></li>
-        <ul>
-            <li><a href="#project2.1">Project 2.1</a></li>
-            <li><a href="#project2.2">Project 2.2</a></li>
-            <li><a href="#project2.3">Project 2.3</a></li>
-        </ul>
-    </ul>
-</nav>
-
-
-<h1 id="project1">1. Spatial Analysis Projects</h1>
-
-<h2>1.1 Chicago 77 neighbourhoods Livability</h2>
-<div class="map-section" id="project1.1">
-    <img src="/assets/images/Chicago_livability.jpg" alt="Chicago livability" width="100%">
+    </nav>
 </div>
-
-
-
-<h1 id="project2">2 Visualization Projects</h1>
-
-<!-- Map 1: DAshboard -->
-<h2 id="project2.1">2.1 Toronto Child Care & Transit Proximity Dashboard</h2>
-
-<!-- Embed ArcGIS Dashboard -->
-<div class="map-section">
-    <iframe 
-        class="map-container"
-        src="https://www.arcgis.com/apps/dashboards/b5121dec467b4886b853cfa380b91ec5"  <!-- Replace with your actual dashboard URL -->
-        allowfullscreen>
-    </iframe>
-</div>
-
-<!-- Dashboard Description -->
-<div class="description">
-    <p>This dashboard provides a comprehensive overview of key geographical data insights. It includes various maps, charts, and interactive elements to help you understand the spatial distribution and patterns of the data.</p>
-</div>
-
-<!-- Divider -->
-<div class="divider"></div>
-
-
-<!-- Map 2: Dashboard -->
-<h2 id="project2.2">2.2 Toronto Health Services Map with Language-Based Selection</h2>
-
-<!-- Embed ArcGIS Dashboard -->
-<div class="map-section">
-    <iframe 
-        class="map-container"
-        src="https://www.arcgis.com/apps/dashboards/1ad2f8f36fca438ca6d92ce40a5ac71e"  <!-- Replace with your actual dashboard URL -->
-        allowfullscreen>
-    </iframe>
-</div>
-
-<!-- Divider -->
-<div class="divider"></div>
-
-
-<!-- Map 3: ArcGIS Instant App -->
-<h2 id="project2.3">2.3 Toronto Tornado Track Animation</h2>
-
-<div class="iframe-wrapper">
-    <!-- Embed ArcGIS Instant App -->
-    <iframe 
-        class="app-container"
-        src="https://utoronto.maps.arcgis.com/apps/instant/slider/index.html?appid=c67dc29fd9594821873c38518a13ee00"  <!-- Replace with your actual Instant App URL -->
-        allowfullscreen>
-    </iframe>
-</div>
-
+    
 </body>
