@@ -7,7 +7,7 @@ permalink: /projects/chicago-livability/
 <!-- Wrap the entire content in a project-container div -->
 <div class="project-container">
 
-  # Chicago 77 Neighbourhoods Livability
+  <h1 class="project-title">Chicago 77 Neighbourhoods Livability</h1>
 
   <!-- Embed ArcGIS Dashboard -->
   <div class="map-section">
@@ -19,13 +19,13 @@ permalink: /projects/chicago-livability/
   </div>
   <!-- Dashboard Description -->
   <div class="description">
-      <p>This dashboard provides a comprehensive overview of key geographical data insights...</p>
+      <d>This dashboard provides a comprehensive overview of key geographical data insights...</d>
   </div>
 
   <!-- Back to Projects Image Link -->
   <div class="back-to-projects">
       <a href="/Projects/">
-          <img src="/assets/images/juanjuan.gif" alt="Back to Projects">
+          <img src="/assets/images/back_button.png" alt="Back to Projects">
       </a>
   </div>
 

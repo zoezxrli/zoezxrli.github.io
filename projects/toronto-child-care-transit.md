@@ -6,7 +6,7 @@ permalink: /projects/toronto-child-care-transit/
 
 <div class="project-container">
 
-  # Toronto Child Care & Transit Proximity Dashboard
+  <h1 class="project-title">Toronto Child Care & Transit Proximity Dashboard</h1>
 
   <div class="map-section">
       <iframe 
@@ -17,12 +17,12 @@ permalink: /projects/toronto-child-care-transit/
   </div>
 
   <div class="description">
-      <p>This dashboard provides a comprehensive overview of key geographical data insights...</p>
+      <d>This dashboard provides a comprehensive overview of key geographical data insights...</d>
   </div>
 
   <div class="back-to-projects">
       <a href="/Projects/">
-          <img src="/assets/images/juanjuan.gif" alt="Back to Projects">
+          <img src="/assets/images/back_button.png" alt="Back to Projects">
       </a>
   </div>
 
