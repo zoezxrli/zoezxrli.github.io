@@ -21,7 +21,7 @@ permalink: /projects/toronto-health-service-map/
   </div>
 
   <div class="back-to-projects">
-      <a href="/Projects/">
+      <a href="/projects/">
           <img src="/assets/images/back_button.png" alt="Back to Projects">
       </a>
   </div>

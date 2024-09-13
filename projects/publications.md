@@ -30,7 +30,7 @@ permalink: /projects/publications/
 
   <!-- Back to Projects Image Link -->
   <div class="back-to-projects">
-      <a href="/Projects/">
+      <a href="/projects/">
           <img src="/assets/images/back_button.png" alt="Back to Projects">
       </a>
   </div>

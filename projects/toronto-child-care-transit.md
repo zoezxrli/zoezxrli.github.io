@@ -21,7 +21,7 @@ permalink: /projects/toronto-child-care-transit/
   </div>
 
   <div class="back-to-projects">
-      <a href="/Projects/">
+      <a href="/projects/">
           <img src="/assets/images/back_button.png" alt="Back to Projects">
       </a>
   </div>
