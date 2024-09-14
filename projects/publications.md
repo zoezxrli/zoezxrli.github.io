@@ -52,6 +52,10 @@ permalink: /projects/publications/
       <a href="https://arxiv.org/abs/2306.09375" style="color: #104f95; text-decoration: underline;">[NeurIPS Dataset and Benchmark 2023]</a>
       <a href="/projects/project_page/#publication1" style="color: #104f95; text-decoration: underline;">[Project Page]</a>
     </li>
+    <!-- Other Figure Visualization -->
+    <li>
+      <a href="/projects/project_page/#others" style="color: #104f95; text-decoration: underline; font-weight: bold;">[Other Figure Visualization Works]</a>
+    </li>
     
     
   </ul>
