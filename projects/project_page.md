@@ -14,6 +14,7 @@ permalink: /projects/project_page/
     <img src="/assets/images/project_img/NeuralMD_figure2.png" alt="Symmetry-Informed Geometric Representation" style="max-width: 100%; height: auto;">
     <img src="/assets/images/project_img/NeuralMD_figure3.jpg" alt="Symmetry-Informed Geometric Representation" style="max-width: 100%; height: auto;">
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
 
   <!-- Dividing Line -->
   <hr style="border: 1px solid #ccc; margin: 40px 0;">
@@ -21,8 +22,9 @@ permalink: /projects/project_page/
   <!-- Publication 5 Image Section -->
   <div id="publication5">
     <h3 style="color: #104f95;">NucleusDiff: Manifold-Constrained Nucleus-Level Denoising Diffusion Model for Structure-Based Drug Design.</h3>
-    <img src="/assets/images/test1.jpg" alt="Symmetry-Informed Geometric Representation" style="max-width: 100%; height: auto;">
+    <img src="/assets/images/juanjuan.gif" alt="Symmetry-Informed Geometric Representation" style="max-width: 100%; height: auto;">
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
 
   <!-- Dividing Line -->
   <hr style="border: 1px solid #ccc; margin: 40px 0;">
@@ -30,8 +32,9 @@ permalink: /projects/project_page/
   <!-- Publication 4 Image Section -->
   <div id="publication4">
     <h3 style="color: #104f95;">Identification of Cu-N2 Sites for Zn-Air Batteries in Harsh Electrolytes</h3>
-    <img src="/assets/images/test1.jpg" alt="Identification of Cu-N2 Sites" style="max-width: 100%; height: auto;">
+    <img src="/assets/images/juanjuan.gif" alt="Identification of Cu-N2 Sites" style="max-width: 100%; height: auto;">
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
 
   <!-- Dividing Line -->
   <hr style="border: 1px solid #ccc; margin: 40px 0;">
@@ -43,6 +46,7 @@ permalink: /projects/project_page/
     <img src="/assets/images/project_img/ProteinDT_figure2.jpg" alt="ProteinDT" style="max-width: 100%; height: auto;">
     <img src="/assets/images/project_img/ProteinDT_figure5.jpg" alt="ProteinDT" style="max-width: 100%; height: auto;">
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
 
   <!-- Dividing Line -->
   <hr style="border: 1px solid #ccc; margin: 40px 0;">
@@ -52,6 +56,7 @@ permalink: /projects/project_page/
     <h3 style="color: #104f95;">GraphCG: Unsupervised Discovery of Steerable Factors When Graph Deep Generative Models Are Entangled</h3>
     <img src="/assets/images/project_img/GraphCG_figure1b.jpg" alt="Unsupervised Discovery" style="max-width: 100%; height: auto;">
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
 
   <!-- Dividing Line -->
   <hr style="border: 1px solid #ccc; margin: 40px 0;">
@@ -67,8 +72,11 @@ permalink: /projects/project_page/
     <img src="/assets/images/project_img/Geom3D_figure7.jpg" alt="Symmetry-Informed Geometric Representation" style="max-width: 100%; height: auto;">
     <img src="/assets/images/project_img/Geom3D_figure8.jpg" alt="Symmetry-Informed Geometric Representation" style="max-width: 100%; height: auto;">
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
+
   <!-- Dividing Line -->
   <hr style="border: 1px solid #ccc; margin: 40px 0;">
+
   <!-- Other Figure Visualization -->
   <div id="others">
     <h2 style="color: #104f95;">Other Figure Visualization Works</h2>
@@ -86,6 +94,7 @@ permalink: /projects/project_page/
     <img src="/assets/images/project_img/MoleculeSTM_figure3.jpg" alt="Unsupervised Discovery" style="max-width: 100%; height: auto;">
     <img src="/assets/images/project_img/MoleculeSTM_figure8.jpg" alt="Unsupervised Discovery" style="max-width: 100%; height: auto;"><br>
   </div>
+  <a href="/projects/publications/" style="font-size: 18px; text-decoration: none;">⬅️ To Publications ⬅️</a>
 
   <!-- Continue for other publications... -->
 
