@@ -1,8 +1,7 @@
 # main text of home
 name: Zhuoxinran Li
 title: Hi !  This is Zoe 👋
-bio: Official name as Zhuoxinran Li, a fourth-year student interested in urban issues and spatial analysis, who also enjoys bartending on weekends.
-
+bio: a fourth-year Human Geography student with a passion for spatial analysis and urban issues, especially those impacting marginalized communities. In my free time, you can find me bartending, giving fun museum tours, or chatting with my cat. Let’s connect and share our journeys!
 # twitter summary info
 description: My personal page, Zhuoxinran Li
 
@@ -43,7 +42,7 @@ email: zhuoxinran.li@mail.utoronto.ca
 authors:
   Zhuoxinran Li:
     name: Zhuoxinran Li
-    bio: Me
+    bio: Zhuoxinran Li
     external-image: false
     picture: assets/images/juanjuan.gif
 
