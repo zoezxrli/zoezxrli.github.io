@@ -11,8 +11,8 @@ permalink: /projects/folium/
   <t class="description">This project analyzes taxi trips and traffic patterns in Porto, categorizing 10,001 taxi trip start points and visualizing traffic volumes during peak hours. Using tools like Folium and Matplotlib, it highlights key routes, congestion hotspots, and spatial movement trends, offering insights into urban mobility and transportation dynamics in the city.<br></t>
 
   <t class="description"><br><strong>Learning Source: </strong>This project was completed as part of the Coursera Project Network 'Geospatial Data Visualization using Python and Folium.'</t>
+  <t class="description"><br><strong>Time: </strong>Create Date: 2024, March to April 2024; Last updated: 2024, October</t>
   <t><br><strong>Skills:</strong> python programming, Pandas, Data Visualiztion<br></t>
-  <t>   </t>
 
   <!-- Map 1 -->
   <div class="map-section">
