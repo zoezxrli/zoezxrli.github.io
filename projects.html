@@ -28,7 +28,7 @@ permanantlink: /Projects/
 </section> -->
 
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Overview</title>
@@ -91,10 +91,10 @@ permanantlink: /Projects/
     </style>
 </head>
 
-<body>
+<body> -->
 
-<div class="content-container">
-    <!-- Table of Contents -->
+<!-- <div class="content-container">
+    Table of Contents
     <nav class="toc">
         <h1>Contents</h1>
         <ul>
@@ -103,12 +103,95 @@ permanantlink: /Projects/
             <h2>2. Visualization Projects</h2>
             <ul>
                 <h3><a href="/projects/toronto-child-care-transit/">2.1 Toronto Child Care & Transit Proximity Dashboard</a></h3>  <!-- Link updated -->
-                <h3><a href="/projects/toronto-health-service-map/">2.2 Toronto Health Services Map with Language-Based Selection</a></h3>  <!-- Link to another new page -->
+                <!-- <h3><a href="/projects/toronto-health-service-map/">2.2 Toronto Health Services Map with Language-Based Selection</a></h3>  Link to another new page
                 <h3><a href="/projects/toronto-tornado-track/">2.3 Toronto Tornado Track Animation</a></h3>  <!-- Link to another new page -->
-                <h3><a href="/projects/chicago-livability/">2.4 Chicago 77 Neighbourhoods Livability</a></h3>
+                <!-- <h3><a href="/projects/chicago-livability/">2.4 Chicago 77 Neighbourhoods Livability</a></h3>
             </ul>
         </ul>
     </nav>
 </div>
     
+</body> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Overview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3列布局 */
+            gap: 20px; /* 每个项目之间的间距 */
+            max-width: 1200px; /* 限制内容宽度 */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover img {
+            transform: scale(1.05); /* 鼠标悬停时放大图片 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-title {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #0077cc;
+            font-weight: bold;
+        }
+
+        .project-title:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="projects-container">
+        <!-- Publications section -->
+        <a href="/projects/publications/" class="project">
+            <img src="/assets/images/publication.jpg" alt="Publications">
+            <p class="project-title">Publications</p>
+        </a>
+
+        <!-- Other Projects -->
+        <a href="/projects/folium/" class="project">
+            <img src="/assets/images/geospatial.jpg" alt="Geospatial Data Visualization using Python and Folium">
+            <p class="project-title">Geospatial Data Visualization using Python and Folium</p>
+        </a>
+        <a href="/projects/toronto-child-care-transit/" class="project">
+            <img src="/assets/images/toronto_child.jpg" alt="Toronto Child Care & Transit Proximity Dashboard">
+            <p class="project-title">Toronto Child Care & Transit Proximity Dashboard</p>
+        </a>
+        <a href="/projects/toronto-health-service-map/" class="project">
+            <img src="/assets/images/toronto_health.jpg" alt="Toronto Health Services Map with Language-Based Selection">
+            <p class="project-title">Toronto Health Services Map</p>
+        </a>
+        <a href="/projects/toronto-tornado-track/" class="project">
+            <img src="/assets/images/tornado.jpg" alt="Toronto Tornado Track Animation">
+            <p class="project-title">Toronto Tornado Track Animation</p>
+        </a>
+        <a href="/projects/chicago-livability/" class="project">
+            <img src="/assets/images/chicago.jpg" alt="Chicago 77 Neighbourhoods Livability">
+            <p class="project-title">Chicago 77 Neighbourhoods Livability</p>
+        </a>
+    </div>
+
 </body>
