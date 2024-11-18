@@ -16,7 +16,7 @@ permalink: /projects/accessibility_hamilton/
   <t class="description"><br><strong>Instructor: </strong>Karen Chapple</t>
   <t class="description"><br><strong>Author: </strong>Zhuoxinran(Zoe) Li</t>
   <t class="description"><br><strong>Time: </strong>2024, Nov to Dec (exp.)</t>
-  <t><br><strong>Skills:</strong> ArcGIS Pro, Python, OpenStreetMap<br></t>
+  <t><br><strong>Skills:</strong> ArcGIS Pro, Python, OpenStreetMap<br><br></t>
 
   <!-- Embed ArcGIS Dashboard -->
   <div class="map-section">
@@ -35,7 +35,8 @@ permalink: /projects/accessibility_hamilton/
           src="/assets/images/senior_compare.jpg" 
           alt="accessibility_hamilton"
       >
-      At the same time, Hamilton is seeing a significant rise in housing costs. Over the past decade, rental rates have climbed by 55%, far exceeding the 22% rise in the overall cost of living. Seniors, particularly those with fixed incomes from pensions or government assistance, are especially vulnerable to these escalating costs. Many are being forced to relocate from central, high-cost neighborhoods to more affordable areas on the city’s outskirts.<br><br>
+      <br>
+      <d>At the same time, Hamilton is seeing a significant rise in housing costs. Over the past decade, rental rates have climbed by 55%, far exceeding the 22% rise in the overall cost of living. Seniors, particularly those with fixed incomes from pensions or government assistance, are especially vulnerable to these escalating costs. Many are being forced to relocate from central, high-cost neighborhoods to more affordable areas on the city’s outskirts.<br><br>
       While moving to less expensive neighborhoods may reduce financial strain, it often leads to new obstacles. Affordable areas typically have fewer healthcare facilities, including pharmacies and long-term care homes. This poses a significant challenge for seniors, especially those living with dementia, who depend on proximity to these essential services. Additionally, public services, including transit infrastructure, are often concentrated in the city core. Seniors living farther away may struggle with longer travel times and reduced access to care.<br><br>
       This story map explores how rising housing prices in Hamilton are displacing low-income seniors and how this displacement affects their access to critical dementia care services. By examining housing trends, mapping vulnerable populations, and analyzing accessibility challenges, the goal is to provide a clearer understanding of these issues and inform potential solutions.
 
@@ -126,6 +127,6 @@ permalink: /projects/accessibility_hamilton/
       <a href="/projects/">
           <img src="/assets/images/back_button.png" alt="Back to Projects">
       </a>
-  </div>
+  
 
 </div>
