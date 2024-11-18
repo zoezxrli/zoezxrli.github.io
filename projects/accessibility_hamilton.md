@@ -29,46 +29,100 @@ permalink: /projects/accessibility_hamilton/
   <!-- Dashboard Description -->
   <h3 class="map-subtitle">Introduction</h3>
   <div class="description">
-      <d>Hamilton, Ontario, has a notably high proportion of seniors compared to other regions in the province. Residents aged 65 and older account for 18.3% of Hamilton’s population, slightly below Ontario’s 18.5% but higher than Toronto’s 17.1%. Among these, seniors aged 85 and older represent 2.6% of Hamilton’s population, aligning with provincial and Toronto averages. This aging population highlights the increasing importance of addressing the unique challenges seniors face in the city.</d>
+      <d>Hamilton is facing an affordable housing crisis that has hit low-income senior renters the hardest. Over the past decade, the city has lost nearly 16,000 rental units priced below $750 per month (Census 2011, 2016, 2021). For seniors living on fixed incomes, such as pensions or government support, this has left few affordable options. Many are being forced to move from central neighborhoods to the city’s outskirts, where they encounter limited access to healthcare services and inadequate public transit. This displacement not only isolates seniors socially and economically but also creates significant challenges to their overall well-being.</d>
       <img 
           class="map-image" 
           src="/assets/images/senior_compare.jpg" 
           alt="accessibility_hamilton"
       >
       <br>
-      <d>At the same time, Hamilton is seeing a significant rise in housing costs. Over the past decade, rental rates have climbed by 55%, far exceeding the 22% rise in the overall cost of living. Seniors, particularly those with fixed incomes from pensions or government assistance, are especially vulnerable to these escalating costs. Many are being forced to relocate from central, high-cost neighborhoods to more affordable areas on the city’s outskirts.<br><br>
-      While moving to less expensive neighborhoods may reduce financial strain, it often leads to new obstacles. Affordable areas typically have fewer healthcare facilities, including pharmacies and long-term care homes. This poses a significant challenge for seniors, especially those living with dementia, who depend on proximity to these essential services. Additionally, public services, including transit infrastructure, are often concentrated in the city core. Seniors living farther away may struggle with longer travel times and reduced access to care.<br><br>
-      This story map explores how rising housing prices in Hamilton are displacing low-income seniors and how this displacement affects their access to critical dementia care services. By examining housing trends, mapping vulnerable populations, and analyzing accessibility challenges, the goal is to provide a clearer understanding of these issues and inform potential solutions.
+      <d>(source: Statistics Canada, Census Tracts, 2021)<br></d>
+      <d>Hamilton’s population includes a notable percentage of seniors compared to other cities in Ontario. Residents aged 65 and older make up 18.3% of the population, slightly below the provincial average of 18.5% but higher than Toronto’s 17.1%. Seniors aged 85 and older account for 2.6% of the city’s population, similar to provincial and Toronto averages. As this aging population grows, so does the need to address the unique challenges seniors face, particularly in housing and accessibility.<br>
+      <br>This story map explores the ways rising rents and displacement are isolating Hamilton’s low-income senior renters. It focuses on three interconnected issues: the loss of affordable housing, access to dementia care facilities, and reliance on public transit. By examining these challenges, this project highlights the urgent need for policies that prioritize housing affordability and equitable urban planning. Through data-driven maps and analysis, this story map offers a clear understanding of the barriers facing seniors and proposes actionable solutions to ensure they remain connected to their communities.
 
 </d>
   </div>
   <h3 class="map-subtitle">Step 2: Mapping Senior Renters and Vulnerable Wards</h3>
   <div class="description">
       <d>
-      Hamilton’s rental affordability crisis has pushed low-income seniors out of high-cost central wards, such as Wards 1, 2, and 3, into more affordable but underserved areas like Wards 11, 12, and 15. Using a Senior Renters Proxy—a combination of senior population percentages and renter proportions—we identified areas with high concentrations of senior renters.<br></d>
-      <d>Key Visualizations:</d>
-      <d>Unaffordability Rates (2016 vs. 2021): These maps highlight how central wards have become increasingly unaffordable, with wards like 1, 2, and 3 experiencing steep price increases.</d>
+      This step combines the visualization of senior renters' distribution and their socioeconomic vulnerability across Hamilton, presenting a cohesive analysis of the challenges they face. By integrating data on senior population density, renter occupancy, and vulnerability scores, we gain a clearer understanding of how housing unaffordability and displacement affect low-income senior renters.<br></d>
+      <d><strong>Senior Renters' Distribution:</strong><br></d>
       <img 
           class="map-image" 
-          src="/assets/images/unaffordable_rate.jpg" 
+          src="/assets/images/census_senior.jpg" 
           alt="accessibility_hamilton"
       >
-      <br>
-      <d>Senior Renters Proxy (2016 and 2021): These maps show how senior renters are increasingly concentrated in peripheral wards as they are displaced from unaffordable central areas.</d>
+      (source: Statistis Canada, Census of Population 2021, Hamilton CMA)<br>
+      <d>Using census data from 2021, we mapped the percentage of residents aged 65 and over across the Hamilton Census Metropolitan Area (CMA) at the census tract level. Although the map includes areas beyond the Hamilton Census Division (CD), such as Burlington and Grimsby, it offers valuable insights into the spatial distribution of seniors. The data reveals distinct patterns:<br></d>
+      <d>1. High concentrations (≥21%) of seniors are primarily located in the west and south of the Hamilton urban core.<br>
+      2. Moderate concentrations (17% to < 21%) form a transitional zone around the edges of the urban core, separating the densest senior populations in outer areas from younger demographics in the city center.<br>
+      3. Lower concentrations (< 17%) are found in central urban areas, particularly around the downtown core and adjacent neighborhoods.<br>
+      </d>
+      <d>This urban-rural divide suggests that seniors are increasingly moving away from the city center, possibly due to affordability pressures or a preference for less densely populated suburban or rural areas. A comparison of senior distribution maps from 2016 to 2021 highlights this trend, showing a noticeable shift of senior populations toward peripheral areas over five years.
+      </d>
       <img 
           class="map-image" 
-          src="/assets/images/senior_renter_proxy.jpg" 
+          src="/assets/images/senior_distribution.jpg" 
           alt="accessibility_hamilton"
       >
+      (source: City of Hamilton Open Data Portal, Census Data, 2016 and 2021)
+      <br><br>
+      <d><strong>Renter Occupancy and Housing Demands </strong><br></d>
+      <d>Since detailed rental market data by age group is unavailable, we used renter occupancy rates to approximate rising rental housing demands. Comparing renter distribution maps from 2016 and 2021 shows a significant increase in tenant occupancy, particularly in peripheral wards. In 2021, the highest tenant occupancy range (55.21%–76.6%) surpassed the highest range in 2016 (32.31%–76.4%). This increase suggests a growing demand for rental housing, likely driven by migration to peripheral wards.</br></d>
+      <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"
+      >
+      (source: City of Hamilton Open Data Portal, Housing Tenure, 2016 and 2021)
       <br>
-      <d>Vulnerability Scores (2016 and 2021): Overlaying unaffordability, senior populations, and rental dependency reveals which wards are most vulnerable, with high scores in wards like 11, 12, and 15.</d>
+      <d><strong>Vulnerability Scores</strong><br></d>
+      <d>To assess the socioeconomic vulnerability of seniors across Hamilton’s 15 wards, we calculated weighted scores using the following indicators:<br>
+      1. Senior Low-Income Measure (LIM) Rate (40%)<br>
+      2. Tenant Unaffordability (20%)<br>
+      3. Senior Population Distribution (20%)<br>
+      4. Renter Occupancy (20%)<br>
+      The vulnerability score for Hamilton’s wards increased from 84.7% in 2016 to 89.5% in 2021, indicating growing challenges for low-income senior renters. Vulnerability has shifted from the city center to peripheral areas, aligning with trends in senior migration and rising rental demand.
+      </d>
       <img 
           class="map-image" 
           src="/assets/images/vulnerable_score.jpg" 
           alt="accessibility_hamilton"
       >
-      <br>
-      <d>The maps reveal a strong correlation between increasing unaffordability and the displacement of senior renters to more vulnerable wards. These peripheral areas lack the healthcare and transit infrastructure necessary to meet the needs of aging populations, creating compounded risks for low-income seniors.
+      <br><br>
+      <d><strong>Housing Affordability and Unaffordability Trends</strong><br>
+      <img 
+          class="map-image" 
+          src="/assets/images/hamilton_zone.jpg" 
+          alt="accessibility_hamilton"
+      ></d>
+      (source: Rental Market Report - Hamilton CMA - Date Releases - 2020)<br>
+      <img 
+          class="map-image" 
+          src="/assets/images/rent_compare.jpg" 
+          alt="accessibility_hamilton"
+      >
+      (source: CMHC’s Rental Market Survey 2019 and 2023, Hamilton CMA, Private Row (Townhouse) and Apartment Average Rents ($), by Zone and Bedroom Type)<br>
+      <d>According to CMHC’s Hamilton CMA rental market reports and maps, rental prices have increased steadily across zones. However, Zone 09 experienced the most dramatic increase, likely due to its larger area and higher prevalence of private row housing, which is costlier than apartments. The unaffordability rate comparison from 2016 to 2021 reveals a general improvement across the city:<br>
+      1. Central wards (1–4) saw a significant decline in unaffordability, from 47.91%–54.50% in 2016 to 38.71%–40.40% in 2021.<br>
+      2. Intermediate wards (5–7) also experienced a reduction, moving from 42.31%–44.40% in 2016 to 30.91%–35.30% in 2021.<br>
+      3. Peripheral wards (8–10, 11–15) remained the most affordable, with unaffordability rates dropping from 39.40%–40.40% in 2016 to 28.60%–30.90% in 2021.<br> 
+      4. However, some peripheral wards, such as Ward 13, saw a slight increase in unaffordability by 2021.<br>
+      </d>
+      <img 
+          class="map-image" 
+          src="/assets/images/unaffordable_rate.jpg" 
+          alt="accessibility_hamilton"
+      >
+      (source: City of Hamilton Open Data Portal, Census Income, 2016 and 2021)
+      <br><br>
+      <d><strong>Implications for Senior Mobility</strong><br>
+      The observed trends in affordability and vulnerability scores highlight the mobility challenges faced by low-income senior renters in Hamilton:<br>
+      1. Central Wards: While unaffordability has decreased, central wards remain out of reach for many low-income seniors due to high rental costs relative to fixed incomes.<br>
+      2. Intermediate Wards: These wards, with a balance between affordability and accessibility, may attract more seniors due to better transit connectivity and healthcare access.<br>
+      3. Peripheral Wards: Despite being the most affordable, these areas often lack sufficient transit and healthcare infrastructure, creating challenges for seniors reliant on public transportation to access essential services.<br> 
+      These patterns indicate a growing displacement of low-income seniors to peripheral areas, which could lead to overcrowding and strain on limited resources. This step sets the stage for examining how housing market trends and unaffordability exacerbate vulnerabilities, particularly for seniors dependent on transit and healthcare access.<br>
+      
 </d>
   </div>
 
