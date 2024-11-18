@@ -22,14 +22,19 @@ permalink: /projects/accessibility_hamilton/
   <div class="map-section">
       <img 
           class="map-image" 
-          src="/assets/images/Chicago_livability.jpg" 
-          alt="Chicago Livability"
+          src="/assets/images/health_care.jpg" 
+          alt="accessibility_hamilton"
       >
   </div>
   <!-- Dashboard Description -->
   <h3 class="map-subtitle">Introduction</h3>
   <div class="description">
-      <d>Hamilton, Ontario, has a notably high proportion of seniors compared to other regions in the province. Residents aged 65 and older account for 18.3% of Hamilton’s population, slightly below Ontario’s 18.5% but higher than Toronto’s 17.1%. Among these, seniors aged 85 and older represent 2.6% of Hamilton’s population, aligning with provincial and Toronto averages. This aging population highlights the increasing importance of addressing the unique challenges seniors face in the city.<br><br>
+      <d>Hamilton, Ontario, has a notably high proportion of seniors compared to other regions in the province. Residents aged 65 and older account for 18.3% of Hamilton’s population, slightly below Ontario’s 18.5% but higher than Toronto’s 17.1%. Among these, seniors aged 85 and older represent 2.6% of Hamilton’s population, aligning with provincial and Toronto averages. This aging population highlights the increasing importance of addressing the unique challenges seniors face in the city.</d>
+      <img 
+          class="map-image" 
+          src="/assets/images/senior_compare.jpg" 
+          alt="accessibility_hamilton"
+      >
       At the same time, Hamilton is seeing a significant rise in housing costs. Over the past decade, rental rates have climbed by 55%, far exceeding the 22% rise in the overall cost of living. Seniors, particularly those with fixed incomes from pensions or government assistance, are especially vulnerable to these escalating costs. Many are being forced to relocate from central, high-cost neighborhoods to more affordable areas on the city’s outskirts.<br><br>
       While moving to less expensive neighborhoods may reduce financial strain, it often leads to new obstacles. Affordable areas typically have fewer healthcare facilities, including pharmacies and long-term care homes. This poses a significant challenge for seniors, especially those living with dementia, who depend on proximity to these essential services. Additionally, public services, including transit infrastructure, are often concentrated in the city core. Seniors living farther away may struggle with longer travel times and reduced access to care.<br><br>
       This story map explores how rising housing prices in Hamilton are displacing low-income seniors and how this displacement affects their access to critical dementia care services. By examining housing trends, mapping vulnerable populations, and analyzing accessibility challenges, the goal is to provide a clearer understanding of these issues and inform potential solutions.
@@ -39,19 +44,46 @@ permalink: /projects/accessibility_hamilton/
   <h3 class="map-subtitle">Step 2: Mapping Senior Renters and Vulnerable Wards</h3>
   <div class="description">
       <d>
-      Hamilton’s rising housing costs are forcing low-income senior renters to relocate to more affordable neighborhoods. Identifying where senior renters are concentrated and understanding the affordability challenges in these areas is essential to assessing their risk of displacement. Senior renters are particularly vulnerable because many depend on fixed incomes from pensions or government programs. These seniors often lack financial flexibility to cope with rising rental costs. To analyze their distribution, we combined two key factors for each ward: the percentage of renters and the percentage of seniors aged 65 and older. This approach helps identify areas with the highest concentration of senior renters, creating a clearer picture of the neighborhoods most at risk.<br><br>
-      Housing affordability in Hamilton has deteriorated over time, with noticeable differences between wards. Comparing unaffordability rates from 2016 and 2021 highlights which areas have become less affordable. Wards with the steepest increases in housing costs are more likely to see senior renters being displaced. On the other hand, wards with lower housing costs, while offering financial relief, often lack sufficient services and infrastructure to meet the needs of displaced seniors. <br><br>
-      This visualization shows potential relocation paths from high-cost wards to more affordable areas, based on geographic connections. These patterns can help identify where displaced seniors are likely to settle and highlight gaps in service accessibility in those neighborhoods.
-
+      Hamilton’s rental affordability crisis has pushed low-income seniors out of high-cost central wards, such as Wards 1, 2, and 3, into more affordable but underserved areas like Wards 11, 12, and 15. Using a Senior Renters Proxy—a combination of senior population percentages and renter proportions—we identified areas with high concentrations of senior renters.<br></d>
+      <d>Key Visualizations:</d>
+      <d>Unaffordability Rates (2016 vs. 2021): These maps highlight how central wards have become increasingly unaffordable, with wards like 1, 2, and 3 experiencing steep price increases.</d>
+      <img 
+          class="map-image" 
+          src="/assets/images/unaffordable_rate.jpg" 
+          alt="accessibility_hamilton"
+      >
+      <br>
+      <d>Senior Renters Proxy (2016 and 2021): These maps show how senior renters are increasingly concentrated in peripheral wards as they are displaced from unaffordable central areas.</d>
+      <img 
+          class="map-image" 
+          src="/assets/images/senior_renter_proxy.jpg" 
+          alt="accessibility_hamilton"
+      >
+      <br>
+      <d>Vulnerability Scores (2016 and 2021): Overlaying unaffordability, senior populations, and rental dependency reveals which wards are most vulnerable, with high scores in wards like 11, 12, and 15.</d>
+      <img 
+          class="map-image" 
+          src="/assets/images/vulnerable_score.jpg" 
+          alt="accessibility_hamilton"
+      >
+      <br>
+      <d>The maps reveal a strong correlation between increasing unaffordability and the displacement of senior renters to more vulnerable wards. These peripheral areas lack the healthcare and transit infrastructure necessary to meet the needs of aging populations, creating compounded risks for low-income seniors.
 </d>
   </div>
 
   <h3 class="map-subtitle">Step 3: Accessibility to Dementia Care Facilities</h3>
   <div class="description">
       <d>
-      The displacement of seniors from high-cost neighborhoods in Hamilton often creates new barriers to essential healthcare services. For seniors living with dementia, access to specialized care facilities, including long-term care homes, pharmacies, and seniors’ active living centers, is crucial for their well-being. Relocating to more affordable wards on the city’s outskirts often results in increased travel distances and times to these vital services, amplifying the challenges they face.<br><br>
-      Proximity to dementia care facilities is a critical factor in maintaining the quality of life for seniors with dementia. As seniors are displaced to more affordable neighborhoods, their ability to access these services becomes significantly limited. Using a proximity analysis, we calculate the travel distances and times from affordable wards to the nearest dementia care facilities. This analysis identifies areas where displaced seniors face the greatest travel burdens, highlighting disparities in healthcare accessibility.<br><br>
-      The results of this analysis reveal that while affordable wards provide financial relief, they often lack adequate healthcare infrastructure. Seniors living in these areas must travel farther to access long-term care homes, pharmacies, and community centers offering dementia-related support. For many, the increased travel burden is compounded by mobility challenges or limited access to transportation options.
+      As seniors are displaced to more affordable wards, their access to critical healthcare services diminishes. Long-term care homes and dementia care facilities are disproportionately concentrated in central wards such as Wards 2 and 3, leaving peripheral wards like Wards 11 and 15 underserved. This relocation increases travel distances and times for seniors, creating additional barriers to care.
+      <d>Key Visualizations:</d>
+      <d>Long-Term Care Facilities Overlayed on Vulnerable Scores: This map shows how high-vulnerability wards, such as Wards 11 and 12, have limited access to long-term care facilities, leaving displaced seniors at a significant disadvantage.</d>
+      <img 
+          class="map-image" 
+          src="/assets/images/long_term_care.jpg" 
+          alt="accessibility_hamilton"
+      >
+      <br>
+      <d>The maps illustrate the mismatch between high-vulnerability areas and the availability of long-term care facilities. Seniors in peripheral wards face longer travel times and reduced access to specialized dementia care, exacerbating health inequities. These findings highlight the need for better distribution of healthcare resources across the city.
 
 </d>
   </div>
@@ -59,22 +91,28 @@ permalink: /projects/accessibility_hamilton/
   <h3 class="map-subtitle">Step 4: Transit Dependency and Mobility Challenges</h3>
   <div class="description">
       <d>
-      As seniors are displaced to more affordable neighborhoods in Hamilton, their reliance on public transit becomes increasingly critical. However, these areas often have limited transit infrastructure, exacerbating the challenges seniors face in accessing essential services, including dementia care facilities.<br><br>
-      Public Transit Accessibility Analysis<br><br>
-      To assess transit accessibility, we analyzed the density of bus stops and major transit routes across Hamilton's wards. Affordable wards, where displaced seniors are likely to relocate, frequently exhibit sparse transit coverage. This scarcity limits seniors' ability to travel efficiently to healthcare services, social activities, and daily necessities.<br><br>
-      Impact on Access to Dementia Care Facilities<br><br>
-      Limited transit options in affordable wards significantly hinder seniors' access to dementia care facilities. Longer travel times and complex transit routes can deter seniors from seeking necessary care, leading to delays in treatment and support. For those with mobility issues or cognitive impairments, these challenges are even more pronounced.
+      Public transit plays a critical role in connecting seniors to healthcare facilities, yet its availability varies widely across Hamilton. Peripheral wards, such as 11, 12, and 15, have sparse bus stop distribution and limited transit routes, making it difficult for seniors to reach long-term care facilities and pharmacies. Displaced seniors, who are often reliant on public transportation, face significant mobility challenges in these areas.<br><br>
+      Public Transit Accessibility Analysis<br>
+      <d>Proximity to Long-Term Care Facilities: This map highlights the increased travel burden for seniors living in peripheral wards, where fewer healthcare resources are available.</d>
+      <img 
+          class="map-image" 
+          src="/assets/images/bus.jpg" 
+          alt="accessibility_hamilton"
+      >
+      <br>
+      <d> The map reveals that transit infrastructure does not adequately support seniors in peripheral wards. For example, seniors in Wards 12 and 15 face longer and more complicated transit routes to reach healthcare facilities, increasing their reliance on community or family support. These gaps highlight the importance of enhancing public transit in underserved areas to ensure equitable access to essential services.
+      </d>
 
 
 </d>
   </div>
 
-  <h3 class="map-subtitle">Final Thought: Building an Inclusive Future for Hamilton's Seniors</h3>
+  <h3 class="map-subtitle">To Conclude</h3>
   <div class="description">
       <d>
-      Hamilton’s rising housing costs are reshaping the city’s landscape, forcing low-income seniors to relocate to more affordable but underserved neighborhoods. This displacement creates significant challenges, particularly for seniors with dementia, as they lose easy access to critical healthcare services and struggle with limited transit options. As the city’s population continues to age, these challenges will only grow, requiring proactive and thoughtful intervention.<br><br>
-      By expanding affordable housing options near essential services, improving transit infrastructure in affordable neighborhoods, and incentivizing the development of dementia care facilities, Hamilton can address these gaps. Ensuring that seniors—especially the most vulnerable—can age with dignity, independence, and access to care is essential for creating a more equitable and age-friendly city.<br><br>
-      The choices made today will determine Hamilton’s ability to support its aging population tomorrow. A city that prioritizes the needs of its seniors not only enhances their quality of life but also strengthens the community as a whole. It is time for Hamilton to lead the way in building an inclusive future for its seniors.
+      Hamilton’s rising housing costs are creating significant challenges for its aging population, particularly low-income senior renters. This analysis shows a clear pattern: seniors are being displaced from central wards, where rents have surged, to more affordable peripheral areas. However, these less expensive wards often lack the infrastructure and services needed to support seniors, creating new difficulties in their daily lives.<br>
+      Displaced seniors face a range of challenges. Wards like 11, 12, and 15, while more affordable, have limited access to critical healthcare services, such as long-term care facilities and pharmacies. This results in longer travel distances and greater reliance on public transportation. For seniors with dementia, these barriers to care can lead to delays in receiving necessary treatment, worsening health outcomes and quality of life.<br>
+      By expanding affordable housing options near essential services, improving transit infrastructure in affordable neighborhoods, and incentivizing the development of dementia care facilities, Hamilton can address these gaps. Ensuring that seniors—especially the most vulnerable—can age with dignity, independence, and access to care is essential for creating a more equitable and age-friendly city.<br>This research also reveals significant inequities in how healthcare and transit resources are distributed across Hamilton. Central wards, where rents have become increasingly unaffordable, remain hubs for healthcare facilities and transit networks. In contrast, peripheral wards with higher vulnerability scores lack the infrastructure needed to support the growing population of displaced seniors. This imbalance highlights systemic gaps that demand immediate attention.
 
 
 </d>
