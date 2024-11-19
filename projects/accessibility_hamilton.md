@@ -158,13 +158,13 @@ permalink: /projects/accessibility_hamilton/
       <ul><d><strong>Bus Stop Density (Figure 11):</strong> Similarly, bus stop density is highest in Wards 2, 7, 8, and 14, supporting ease of transit in these areas. In contrast, Wards 9, 11, 12, 13, and 15 have limited public transit options, posing challenges for residents needing transportation to healthcare facilities.<br></d></ul>
       <img 
           class="map-image" 
-          src="/assets/images/bus_den.jpg" 
+          src="/assets/images/bus_den.png" 
           alt="accessibility_hamilton"
       ><z>Figure 11: Bus Stops Distribution by Hamilton CD Wards </z><br>
       <ul><d><strong>Long-Term Care Facility Densit (Figure 12):</strong> The density of long-term care facilities also varies significantly across wards. Ward 14 has the highest concentration of long-term care facilities, whereas Wards 11, 12, 13, and 15 are underserved in this regard.<br></d></ul>
       <img 
           class="map-image" 
-          src="/assets/images/LTC.jpg" 
+          src="/assets/images/LTC.png" 
           alt="accessibility_hamilton"
       ><z>Figure 12: Long-Term Care Distribution by Hamilton CD Wards </z><br>
       <strong>3. Overall Findings and Recommendations</strong><br>
