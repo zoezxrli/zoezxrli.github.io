@@ -22,7 +22,7 @@ permalink: /projects/accessibility_hamilton/
   <div class="map-section">
       <img 
           class="map-image" 
-          src="/assets/images/health_care.jpg" 
+          src="/assets/images/map_hamilton.jpg" 
           alt="accessibility_hamilton"
       >
   </div>
