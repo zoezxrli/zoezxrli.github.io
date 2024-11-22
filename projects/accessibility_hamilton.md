@@ -178,14 +178,21 @@ permalink: /projects/accessibility_hamilton/
       <d>
       The mapping and analysis reveal that while central wards such as Wards 2, 7, 8, and 14 have a higher concentration of essential facilities—pharmacies, bus stops, and long-term care homes—the peripheral wards, including Wards 11, 12, 13, and 15, remain underserved. Seniors displaced to these areas face limited access to pharmacies and healthcare services, compounded by a lack of public transit connectivity. Even in Wards 15 and 13, which have better accessibility to dementia care facilities, the supporting infrastructure is insufficient, particularly in their outer regions. These disparities in facility density and accessibility create significant barriers for vulnerable elderly populations, leaving many socially and economically isolated.<br>
       This analysis also underscores the interconnectedness of housing affordability, healthcare access, and public transit infrastructure. Seniors’ mobility and ability to remain engaged in their communities hinge on equitable access to these critical services. The ongoing loss of affordable rental units and the migration of seniors to less accessible areas pose a risk of further widening the gap in healthcare and social support for Hamilton’s aging population.<br>
-      To address these challenges, targeted policy interventions are essential. These could include increasing investment in public transit infrastructure in underserved wards, incentivizing the development of healthcare facilities and pharmacies in peripheral areas, and prioritizing affordable housing initiatives to allow seniors to remain in centrally located, well-serviced neighborhoods. Additionally, integrating healthcare and transit planning into broader urban development strategies would ensure a more equitable distribution of services for seniors across all wards.
+      To address these challenges, targeted policy interventions are essential. These could include increasing investment in public transit infrastructure in underserved wards, incentivizing the development of healthcare facilities and pharmacies in peripheral areas, and prioritizing affordable housing initiatives to allow seniors to remain in centrally located, well-serviced neighborhoods. Additionally, integrating healthcare and transit planning into broader urban development strategies would ensure a more equitable distribution of services for seniors across all wards.<br>
 
 
 </d>
   </div>
 
-
-  <div class="description"><t>City of Chicago Data Portal. (2005-2023). Chicago Neighborhood Socioeconomic Data [Data sets: Crime, Health, Green Space, Education, Cultural Amenities, Population, Boundaries]. Retrieved from https://data.cityofchicago.org/</t>
+  <h3 class="map-subtitle">Citation</h3>
+  <div class="description"><t>1. <strong>Canada Mortgage and Housing Corporation.</strong> (2019 & 2023). Rental market survey: Hamilton CMA, private row (townhouse) and apartment average rents ($), by zone and bedroom type.</t><br>
+  <t>2. <strong>Canada Mortgage and Housing Corporation.</strong> (2020). Rental market report: Hamilton CMA.</t><br>
+  <t>3. <strong>City of Hamilton.</strong> (2016 & 2021). Census data. City of Hamilton Open Data Portal.</t><br>
+  <t>4. <strong>City of Hamilton.</strong> (2016 & 2021). Census income data. City of Hamilton Open Data Portal.</t><br>
+  <t>5. <strong>Government of Canada.</strong> (2024). HSR bus stops. Open Hamilton. </t><br>
+  <t>6. <strong>Government of Canada.</strong> (2020). Rental market Hamilton CMA, 2020. Canada Mortgage and Housing Corporation.</t><br>
+  <t>7. <strong>Ministry of Health.</strong> (2023). Service provider locations. Ontario Geohub.</t><br>
+  <t>8. <strong>Statistics Canada.</strong> (2016 & 2021). Census profile, 2021 Census of population: Hamilton, census division (CDR), Ontario. Government of Canada.</t>
   </div>
   <!-- Back to Projects Image Link -->
   <div class="back-to-projects">
