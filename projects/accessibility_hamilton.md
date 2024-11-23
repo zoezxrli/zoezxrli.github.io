@@ -26,8 +26,42 @@ permalink: /projects/accessibility_hamilton/
           alt="accessibility_hamilton"
       >
   </div>
+
+  <!-- Table of Content -->
+  <h2 class="map-subtitle">Table of Content</h2>
+  <div class="toc">
+    <ul>
+      <li><a href="#introduction"><strong>Introduction</strong></a></li>
+      <li><a href="#methodology"><strong>Methodology</strong></a></li>
+      <ul>
+        <li><a href="#data_collection">Data Collection and Sources</a></li>
+        <li><a href="#data_processing">Data Preparation and Processing</a></li>
+        <li><a href="#facility_density">Facility Density and Weighted Accessibility</a></li>
+        <li><a href="#accessibility_analysis">Spatial Accessibility Analysis</a></li>
+        <li><a href="#classification_visualization">Data Classification and Visualization</a></li>
+        <li><a href="#tools">Tools and Models Utilized</a></li>
+      </ul>
+      <li><a href="#senior_renters"><strong>Mapping Senior Renters and Vulnerable Wards</strong></a></li>
+      <ul>
+        <li><a href="#renters_distribution">Senior Renters' Distribution</a></li>
+        <li><a href="#housing_demands">Renter Occupancy and Housing Demands</a></li>
+        <li><a href="#vulnerability_scores">Vulnerability Scores</a></li>
+        <li><a href="#affordability_trends">Housing Affordability and Unaffordability Trends</a></li>
+        <li><a href="#senior_mobility">Implications for Senior Mobility</a></li>
+      </ul>
+      <li><a href="#dementia_care"><strong>Accessibility to Dementia Care Facilities</strong></a></li>
+      <ul>
+        <li><a href="#combined_density">Combined Weighted Facility Density</a></li>
+        <li><a href="#individual_density">Individual Facility Density Analysis</a></li>
+        <li><a href="#findings">Overall Findings and Recommendations</a></li>
+      </ul>
+      <li><a href="#conclusion"><strong>To Conclude</strong></a></li>
+      <li><a href="#references"><strong>References</strong></a></li>
+    </ul>
+  </div>
+
   <!-- Dashboard Description -->
-  <h2 class="map-subtitle">Introduction</h2>
+  <h2 id="introduction" class="map-subtitle">Introduction</h2>
   <div class="description">
       <d>Hamilton is facing an affordable housing crisis that has hit low-income senior renters the hardest. Over the past decade, the city has lost nearly 16,000 rental units priced below $750 per month (Census 2011, 2016, 2021). For seniors living on fixed incomes, such as pensions or government support, this has left few affordable options. Many are being forced to move from central neighborhoods to the city’s outskirts, where they encounter limited access to healthcare services and inadequate public transit. This displacement not only isolates seniors socially and economically but also creates significant challenges to their overall well-being.</d>
       <img 
@@ -41,11 +75,60 @@ permalink: /projects/accessibility_hamilton/
 
 </d>
   </div>
-  <h2 class="map-subtitle">Mapping Senior Renters and Vulnerable Wards</h2>
+<!-- Methods -->
+  <h2 id="methodology" class="map-subtitle">Methodology</h2>
+  <div class="description">
+      <d><strong id="data_collection">1. Data Collection and Sources </strong><br></d>
+      <d>The data for this story map analysis was gathered from multiple reliable sources to explore the impact of rising housing costs on Hamilton’s seniors. The data sources included:<br>
+      <ul>
+        <d><strong>• Canada Mortgage and Housing Corporation </strong> (2019, 2020, 2023) provided rental market information for the Hamilton Census Metropolitan Area (CMA).<br>
+        <strong>• City of Hamilton Open Data Portal</strong> (2016, 2021) for census, income, and bus stop data.<br>
+        <strong>• Ontario Geohub</strong> (2023) provided healthcare facility locations across Ontario.<br>
+        <strong>• Statistics Canada </strong> (2021) provided census data regarding population statistics and senior demographics for Hamilton CMA.</d>
+      </ul>
+      </d>
+      <d><strong id="data_processing">2. Data Preparation and Processing </strong><br></d>
+      <d>Data processing was performed using Python, leveraging data analysis libraries including <strong>pandas and <strong>geopandas for efficient handling of spatial and tabular data. The main steps included:<br>
+      <ul>
+        <d><strong>I. Loading Data: </strong>Shapefiles for ward boundaries and CSV files for healthcare services (long-term care, pharmacies, bus stops, and health facilities) were loaded into GeoDataFrames using <strong>geopandas</strong>.<br>
+        <strong>II. Data Standardization:</strong> Column names were standardized across all datasets to maintain consistency and avoid processing errors.<br>
+        <strong>III. Spatial Joins:</strong> The facility and service datasets were spatially joined with ward geometries, assigning each facility to its respective ward. This enabled a spatial understanding of the service distribution.<br>
+        <strong>IV. Area Calculation:</strong> Ward areas were computed in square kilometers to facilitate the calculation of facility density.</d>
+      </ul>
+      <d><strong id="facility_density">3. Facility Density and Weighted Accessibility </strong><br></d>
+      <d>To understand the accessibility landscape across Hamilton’s wards, facility density and weighted accessibility calculations were conducted.<br>
+      <ul>
+        <d><strong>I. Facility Density Calculation: </strong>Using <strong>panda</strong>, we aggregated the counts of long-term care facilities, pharmacies, bus stops, and health facilities for each ward. These counts were divided by the ward area to derive the density (per square kilometer) for each facility type.<br>
+        <strong>II. Weighted Facility Density:</strong> A combined facility density index was calculated by applying weights to the different facility types to emphasize their significance for elderly residents. The weights also considered the percentage of senior populations in each ward, providing an equitable approach to accessibility calculation.<br></d>
+      </ul>
+      </d>
+      <d><strong id="accessibility_analysis">4. Spatial Accessibility Analysis </strong><br></d>
+      <d>The accessibility to dementia care facilities and bus stops was analyzed by leveraging the Hamilton street network. This analysis focused on calculating how accessible the facilities were for residents in each ward.<br>
+      <ul>
+        <d><strong>I. Street Network Analysis: </strong>The street network was extracted using <strong>osmnx</strong>, which allowed for a network-based approach to assess connectivity and walking accessibility within Hamilton.<br>
+        <strong>II. Nearest Facility and Accessibility Calculation: </strong> Using a <strong>KD-Tree</strong> from <strong>scipy.spatial</strong>, we conducted nearest-neighbor searches to determine the closest dementia care facilities and bus stops to each ward centroid. The <strong>networkx</strong> library was used for shortest path calculations, providing insights into the network distance from the wards to these key facilities. Accessibility rates were computed as weighted averages, with weights inversely proportional to the distance, highlighting how ease of access decreases with increased distance.<br></d>
+      </ul>
+      </d>
+      <d><strong id="classification_visualization">5. Data Classification and Visualization </strong><br></d>
+      <ul>
+        <d><strong>• Classification: Natural Breaks (Jenks)</strong> classification was applied using the <strong>mapclassify</strong> library to categorize combined facility densities into distinct groups. This classification method helped highlight disparities in facility access across wards.<br>
+        <strong>• Visualization:</strong> Data visualization was conducted using <strong>matplotlib</strong> and <strong>contextily</strong> to generate both bar charts and geographic maps. These visualizations illustrated facility density, accessibility rates, and ward-specific characteristics, allowing for an in-depth comparison of the availability of services for seniors across Hamilton.<br></d>
+      </ul>
+      <d><strong id="tools">6. Tools and Models Utilized </strong></d>
+      <ul>
+        <d><strong>• Data Analysis: pandas</strong> and <strong>geopandas</strong> for data manipulation.<br>
+        <strong>• Spatial Joins: </strong> Conducted using <strong>geopandas</strong> to merge ward data with facilities and services.<br>
+        <strong>• Network Analysis: osmnx</strong> and <strong>networkx</strong> for analyzing the street network and calculating shortest paths.<br>
+        <strong>• Proximity Calculations: scipy.spatial</strong> for nearest-neighbor search via KD-Tree.<br>
+        <strong>• Classification: Natural Breaks (Jenks)</strong> using <strong>mapclassify</strong> to classify facility densities.<br>
+        <strong>• Data Visualization: matplotlib</strong> for plotting maps and charts, with <strong>contextily</strong> used for basemap integration.<br></d>
+      </ul>
+  <h2 class="map-subtitle">Analysis</h2>
+  <h2 id="senior_renters" class="map-subtitle">Mapping Senior Renters and Vulnerable Wards</h2>
   <div class="description">
       <d>
       This step combines the visualization of senior renters' distribution and their socioeconomic vulnerability across Hamilton, presenting a cohesive analysis of the challenges they face. By integrating data on senior population density, renter occupancy, and vulnerability scores, we gain a clearer understanding of how housing unaffordability and displacement affect low-income senior renters.<br></d>
-      <d><strong>1. Senior Renters' Distribution:</strong><br></d>
+      <d><strong id="renters_distribution">1. Senior Renters' Distribution:</strong><br></d>
       <img 
           class="map-image" 
           src="/assets/images/census_senior.jpg" 
@@ -67,7 +150,7 @@ permalink: /projects/accessibility_hamilton/
       ><z>Figure 3: Comparison of Senior Distribution of 2016 and 2021 in Hamilton CD
       (source: City of Hamilton Open Data Portal, Census Data, 2016 and 2021)
       </z><br>
-      <d><strong>2. Renter Occupancy and Housing Demands </strong><br></d>
+      <d><strong id="housing_demands">2. Renter Occupancy and Housing Demands </strong><br></d>
       <d>Since detailed rental market data by age group is unavailable, this step's analysis base on renter occupancy rates to approximate rising rental housing demands. Comparing renter distribution maps (Figure 4) from 2016 and 2021 shows a significant increase in tenant occupancy, particularly in peripheral wards. In 2021, the highest tenant occupancy range (55.21%–76.6%) surpassed the highest range in 2016 (32.31%–76.4%). This increase suggests a growing demand for rental housing, likely driven by migration to peripheral wards.</d>
       <img 
           class="map-image" 
@@ -75,7 +158,7 @@ permalink: /projects/accessibility_hamilton/
           alt="accessibility_hamilton"
       ><z>Figure 4: Comparison of Renter Distribution of 2016 and 2021 in Hamilton CD
       (source: City of Hamilton Open Data Portal, Housing Tenure, 2016 and 2021)</z><br>
-      <d><strong>3. Vulnerability Scores</strong><br></d>
+      <d><strong id="vulnerability_scores">3. Vulnerability Scores</strong><br></d>
       <d>To assess the socioeconomic vulnerability of seniors across Hamilton’s 15 wards, the weighted scores is calculated by using the following indicators:<br>
       <ul>
         <d><strong>I.</strong> Senior Low-Income Measure (LIM) Rate (40%)<br>
@@ -90,7 +173,7 @@ permalink: /projects/accessibility_hamilton/
           src="/assets/images/vulnerable_score.jpg" 
           alt="accessibility_hamilton"
       ><z>Figure 5: Comparison of Vulnerable Score of 2016 and 2021 in Hamilton CD</z><br>
-      <d><strong>4. Housing Affordability and Unaffordability Trends</strong><br>
+      <d><strong id="affordability_trends">4. Housing Affordability and Unaffordability Trends</strong><br>
       <img 
           class="map-image" 
           src="/assets/images/hamilton_zone.jpg" 
@@ -117,7 +200,7 @@ permalink: /projects/accessibility_hamilton/
       ><z>Figure 7: Comparison of Unaffordability Rate of 2016 and 2021 in Hamilton CD
       (source: City of Hamilton Open Data Portal, Census Income, 2016 and 2021)
       </z><br>
-      <d><strong>5. Implications for Senior Mobility</strong><br>
+      <d><strong id="senior_mobility">5. Implications for Senior Mobility</strong><br>
       The observed trends in affordability and vulnerability scores highlight the mobility challenges faced by low-income senior renters in Hamilton:<br>
       <ul>
         <d> <strong>I.</strong> Central Wards: While unaffordability has decreased, central wards remain out of reach for many low-income seniors due to high rental costs relative to fixed incomes.<br>
@@ -130,7 +213,7 @@ permalink: /projects/accessibility_hamilton/
 </d>
 
 
-  <h2 class="map-subtitle">Accessibility to Dementia Care Facilities</h2>
+  <h2 id="dementia_care" class="map-subtitle">Accessibility to Dementia Care Facilities</h2>
   <div class="description">
       <d>
       The accessibility analysis of dementia care facilities across Hamilton's wards reveals notable disparities, underscoring the uneven provision of healthcare services for elderly residents. Wards 15 and 13 exhibit the highest accessibility to dementia care facilities, suggesting that residents in these wards are in closer proximity to specialized dementia care. However, this advantage is not complemented by the availability of other essential healthcare-related infrastructure.
@@ -141,14 +224,14 @@ permalink: /projects/accessibility_hamilton/
           alt="accessibility_hamilton"
       ><z>Figure 8: Bus Stops and Dementia Health Service Point Distribution in Hamilton CD</z>
       <br>
-      <d><strong>1. Combined Weighted Facility Density</strong><br>
+      <d><strong id="combined_density">1. Combined Weighted Facility Density</strong><br>
       The combined weighted facility density map (Figure 9), which incorporates the distribution of long-term care facilities, pharmacies, and bus stops with respect to each ward's senior population ratio, provides a comprehensive view of overall service accessibility. Wards 2, 7, 8, and 14 show the highest combined facility density, indicating a concentration of supporting services in central areas. In contrast, Wards 11, 12, 13, and 15 have significantly lower combined facility densities, pointing to a lack of complementary facilities that would support elderly residents in accessing dementia care.<br>
       <img 
           class="map-image" 
           src="/assets/images/all_density.jpg" 
           alt="accessibility_hamilton"
       ><z>Figure 9: Long-Term Care, Pharmacy, and Bus Stops Distribution by Hamilton CD Wards</z><br>
-      <strong>2. Individual Facility Density Analysis</strong><br>
+      <strong id="individual_density">2. Individual Facility Density Analysis</strong><br>
       <ul><d><strong>Pharmacy Density (Figure 10):</strong> The pharmacy density analysis shows Ward 2 with the highest concentration of pharmacies, while suburban Wards 9, 11, 12, 13, and 15 have minimal availability, limiting residents' access to essential medications.<br></d></ul>
       <img 
           class="map-image" 
@@ -167,13 +250,13 @@ permalink: /projects/accessibility_hamilton/
           src="/assets/images/LTC.png" 
           alt="accessibility_hamilton"
       ><z>Figure 12: Long-Term Care Distribution by Hamilton CD Wards </z><br>
-      <strong>3. Overall Findings and Recommendations</strong><br>
+      <strong id="findings">3. Overall Findings and Recommendations</strong><br>
       <d>Overall, the findings emphasize that while Wards 15 and 13 may have better accessibility to dementia care facilities due to the proximity of bus stops, they lack the supporting infrastructure required for effective and convenient access, especially toward their peripheral areas. The combined weighted facility density map highlights the uneven distribution of critical services across Hamilton's wards, creating barriers for elderly residents in accessing necessary care. There is an urgent need for targeted interventions to address these disparities and ensure equitable access to healthcare services, particularly in underserved areas.<br><br>
 
 </d>
 </d>
 
-  <h3 class="map-subtitle">To Conclude</h3>
+  <h3 id="conclusion" class="map-subtitle">To Conclude</h3>
   <div class="description">
       <d>
       The mapping and analysis reveal that while central wards such as Wards 2, 7, 8, and 14 have a higher concentration of essential facilities—pharmacies, bus stops, and long-term care homes—the peripheral wards, including Wards 11, 12, 13, and 15, remain underserved. Seniors displaced to these areas face limited access to pharmacies and healthcare services, compounded by a lack of public transit connectivity. Even in Wards 15 and 13, which have better accessibility to dementia care facilities, the supporting infrastructure is insufficient, particularly in their outer regions. These disparities in facility density and accessibility create significant barriers for vulnerable elderly populations, leaving many socially and economically isolated.<br>
@@ -184,7 +267,7 @@ permalink: /projects/accessibility_hamilton/
 </d>
   </div>
 
-  <h3 class="map-subtitle">Citation</h3>
+  <h3 id="references" class="map-subtitle">Citation</h3>
   <div class="description"><t>1. <strong>Canada Mortgage and Housing Corporation.</strong> (2019 & 2023). Rental market survey: Hamilton CMA, private row (townhouse) and apartment average rents ($), by zone and bedroom type.</t><br>
   <t>2. <strong>Canada Mortgage and Housing Corporation.</strong> (2020). Rental market report: Hamilton CMA.</t><br>
   <t>3. <strong>City of Hamilton.</strong> (2016 & 2021). Census data. City of Hamilton Open Data Portal.</t><br>
