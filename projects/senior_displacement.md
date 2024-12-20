@@ -10,9 +10,9 @@ permalink: /projects/senior_displacement/
   <h1 class="project-title">Final Project</h1>
   <h1 class="project-title">Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors</h1>
   <h3 class="map-subtitle">Project Summary</h3>
-  <t class="description">This story map explores the intersection of housing affordability, accessibility to healthcare, and public transit availability for Hamilton's low-income senior renters. Between two census years, rising rents and the loss of affordable housing have displaced many seniors from central neighborhoods to peripheral areas, where they face limited access to essential services. The analysis reveals significant disparities in healthcare infrastructure, with central wards benefiting from higher densities of dementia care facilities, pharmacies, bus stops, and long-term care services, while peripheral wards remain underserved.<br>By integrating data-driven maps and socioeconomic indicators, the story map highlights how these disparities isolate seniors socially and economically, creating barriers to healthcare and mobility. It underscores the urgent need for equitable urban planning policies, including improved transit connectivity, expanded healthcare infrastructure, and affordable senior housing, to ensure Hamilton's aging population remains connected to their communities and essential resources. <br></t>
+  <t class="description"><strong>TBA</strong><br>By integrating data-driven maps and socioeconomic indicators, the story map highlights how these disparities isolate seniors socially and economically, creating barriers to healthcare and mobility. It underscores the urgent need for equitable urban planning policies, including improved transit connectivity, expanded healthcare infrastructure, and affordable senior housing, to ensure Hamilton's aging population remains connected to their communities and essential resources. <br></t>
 
-  <t class="description"><br><strong>Project: </strong>GGR377 Assignment 2: Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors</t>
+  <t class="description"><br><strong>Project: </strong>GGR377 Final Report: Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors</t>
   <t class="description"><br><strong>Instructor: </strong>Karen Chapple</t>
   <t class="description"><br><strong>Author: </strong>Zhuoxinran(Zoe) Li</t>
   <t class="description"><br><strong>Time: </strong>2024, Nov to Dec (exp.)</t>
@@ -29,105 +29,111 @@ permalink: /projects/senior_displacement/
 
   <!-- Table of Content -->
   <h2 class="map-subtitle">Table of Content</h2>
-  <div class="toc">
-    <ul>
-      <li><a href="#introduction"><strong>Introduction</strong></a></li>
-      <li><a href="#methodology"><strong>Methodology</strong></a></li>
+    <div class="toc">
       <ul>
-        <li><a href="#data_collection">Data Collection and Sources</a></li>
-        <li><a href="#data_processing">Data Preparation and Processing</a></li>
-        <li><a href="#facility_density">Facility Density and Weighted Accessibility</a></li>
-        <li><a href="#accessibility_analysis">Spatial Accessibility Analysis</a></li>
-        <li><a href="#classification_visualization">Data Classification and Visualization</a></li>
-        <li><a href="#tools">Tools and Models Utilized</a></li>
+        <li><a href="#introduction"><strong>Introduction</strong></a></li>
+        <li><a href="#background"><strong>Background</strong></a></li>
+        <ul>
+          <li><a href="#housing_market_trends">Housing Market Trends (2019-2023)</a></li>
+          <li><a href="#aging_population">Hamilton’s aging population (2016-2021)</a></li>
+          <li><a href="#peripheral_access">Peripheral accessibility challenges (2024)</a></li>
+          <li><a href="#tools">Tools and Models Utilized (TBA)</a></li>
+        </ul>
+        <li><a href="#methodology"><strong>Methodology</strong></a></li>
+        <ul>
+          <li><a href="#data_source">Data Source</a></li>
+          <li><a href="#housing_demands">Methods</a></li>
+          <ul>
+              <li><a href="#renters_distribution">Population-Weighted Centroid</a></li>
+              <li><a href="#housing_demands">Vulnerability Score</a></li>
+              <li><a href="#housing_demands">Accessibility Score</a></li>
+              <li><a href="#housing_demands">Synthesizing Trends</a></li>
+          </ul>
+        <li><a href="#vulnerability_scores">Results</a></li>
+        <ul>
+          <li><a href="#affordability_trends">Senior Displacement Trends (2016-2021)</a></li>
+          <li><a href="#senior_mobility">Vulnerability (2019-2023)</a></li>
+          <li><a href="#affordability_trends">Accessibility Score (2024)</a></li>
+          <li><a href="#affordability_trends">Synthesizing Trends</a></li>
+        </ul>
+        <li><a href="#affordability_trends">Recommendation</a></li>
+        <li><a href="#senior_mobility">Conclusion</a></li>
+        <li><a href="#dementia_care">Challenges and Limitations</a></li>
+        <li><a href="#combined_density">Reference</a></li>
       </ul>
-      <li><a href="#senior_renters"><strong>Mapping Senior Renters and Vulnerable Wards</strong></a></li>
-      <ul>
-        <li><a href="#renters_distribution">Senior Renters' Distribution</a></li>
-        <li><a href="#housing_demands">Renter Occupancy and Housing Demands</a></li>
-        <li><a href="#vulnerability_scores">Vulnerability Scores</a></li>
-        <li><a href="#affordability_trends">Housing Affordability and Unaffordability Trends</a></li>
-        <li><a href="#senior_mobility">Implications for Senior Mobility</a></li>
-      </ul>
-      <li><a href="#dementia_care"><strong>Accessibility to Dementia Care Facilities</strong></a></li>
-      <ul>
-        <li><a href="#combined_density">Combined Weighted Facility Density</a></li>
-        <li><a href="#individual_density">Individual Facility Density Analysis</a></li>
-        <li><a href="#findings">Overall Findings and Recommendations</a></li>
-      </ul>
-      <li><a href="#conclusion"><strong>To Conclude</strong></a></li>
-      <li><a href="#references"><strong>References</strong></a></li>
-    </ul>
-  </div>
+    </div>
 
   <!-- Dashboard Description -->
   <h2 id="introduction" class="map-subtitle">Introduction</h2>
   <div class="description">
-      <d>According to Statistics Canada’s 2022 report, “Housing Challenges Remain for Vulnerable Populations in 2021,” despite fewer Canadian households living in unaffordable housing in 2021, significant challenges remain for certain vulnerable groups. In 2021, 3.8% of all households in Canada’s 10 provinces lived in social and affordable housing (SAH), representing 11.9% of renter households. However, a substantial number of households—around 227,100—were still waiting for access to SAH. Among those on the waitlist, nearly twice as many households (148,200) reported waiting two years or longer, compared to those waiting less than two years (76,000). Notably, 1.8% of the 4.1 million senior-led households in Canada were on a waitlist for SAH, with roughly seven in ten waiting for more than two years. Between 2018 and 2021, average monthly shelter costs, including rent or mortgages, utilities, property taxes, and condo fees, increased by 7.0% across the provinces. Despite a decrease in the number of households living in unaffordable housing, vulnerable populations, including senior renters, continue to face significant affordability challenges.</d>
-      <d>Senior renters living alone, who make up a substantial portion of the aging population, are particularly vulnerable. In 2021, 49.0% of lone senior renters were living in unaffordable housing, a rate nearly three times higher than that of senior homeowners living alone (18.8%). Among lone seniors in non-SAH housing, the situation is even more acute, with 55.0% living in unaffordable housing, compared to 31.0% of those in SAH (The Daily — Housing Challenges Remain for Vulnerable Populations in 2021).</d>
-      <d>Problem Definition</d>
-      <d>In cities like Montreal, older low-income tenants often face displacement due to gentrification-driven rent increases. Seniors, typically living on fixed incomes such as public pensions, find themselves unable to keep up with escalating rents. When rents surpass their financial capacity, they may be forced to relocate or become targets for eviction. Displacement is not only a financial burden but also has profound social and health consequences, particularly for seniors. Relocation disrupts long-established social networks, reduces access to healthcare, and exacerbates feelings of isolation (Simard, 2020). In Hamilton, as in Montreal, rising rents have pushed seniors from central neighborhoods to peripheral areas, often forcing them into regions with fewer healthcare facilities, further complicating access to essential services such as dementia care (Simard, 2020). This phenomenon is referred to as “exclusionary displacement,” a term coined by Twigge Molecey (2023), which describes how seniors are forced to relocate to neighborhoods with fewer services and amenities due to unaffordable housing.</d>
-      <d>Hypothesis</d>
-      <d>Building on prior research that shows a strong correlation between rising housing costs and displacement among low-income populations, this study hypothesizes that Hamilton’s housing market trends have contributed to the displacement of low-income senior renters from central neighborhoods to peripheral areas, with severe consequences for their access to healthcare services, including dementia care facilities.</d>
-      <d>Bridge the Gap</d>
-      <d>While significant research has examined the effects of rising housing costs on vulnerable populations, including senior renters in urban areas, few studies have focused on Hamilton’s unique context. This study aims to fill this gap by applying known concepts of displacement and housing affordability to Hamilton’s specific housing dynamics. By analyzing housing trends, senior population movements, and transit accessibility to healthcare, this study offers new insights into how displacement exacerbates inequalities in access to care for senior renters in Hamilton.</d>
-      <d>Research Question</d>
-      <d>How do rising rents influence the displacement of low-income senior renters in Hamilton, and how does this displacement impact their accessibility to dementia care facilities?</d>
-      <d>Motivation and Significance</d>
-      <d>This research addresses systemic inequalities in housing affordability, healthcare access, and public transit availability for vulnerable senior populations. It is particularly focused on low-income senior renters, who are disproportionately affected by rising rents and inadequate access to healthcare services. The findings will provide actionable insights for policymakers and urban planners, offering a path toward more equitable urban development in Hamilton—ensuring that vulnerable populations can remain in their communities with adequate access to essential services.
-      </d>
-</d>
-      <img 
-          class="map-image" 
-          src="/assets/images/senior_compare.jpg" 
-          alt="accessibility_hamilton"
-      >
-      <z>Figure 1: Comparison of Senior Ratios Across Regions (source: Statistics Canada, Census Tracts, 2021)</z><br><br>
-      <d>Hamilton’s population includes a notable percentage of seniors compared to other cities in Ontario. Figure 1. demonstrates residents aged 65 and older make up 18.3% of the population, slightly below the provincial average of 18.5% but higher than Toronto’s 17.1%. Seniors aged 85 and older account for 2.6% of the city’s population, similar to provincial and Toronto averages. As this aging population grows, so does the need to address the unique challenges seniors face, particularly in housing and accessibility.
-      <br>This story map explores the ways rising rents and displacement are isolating Hamilton’s low-income senior renters. It focuses on three interconnected issues: the loss of affordable housing, access to dementia care facilities, and reliance on public transit. By examining these challenges, this project highlights the urgent need for policies that prioritize housing affordability and equitable urban planning. Through data-driven maps and analysis, this story map offers a clear understanding of the barriers facing seniors and proposes actionable solutions to ensure they remain connected to their communities.
-
-</d>
+      <d>According to Statistics Canada’s 2022 report, “Housing Challenges Remain for Vulnerable Populations in 2021,” despite fewer Canadian households living in unaffordable housing in 2021, significant challenges remain for certain vulnerable groups. In 2021, 3.8% of all households in Canada’s 10 provinces lived in social and affordable housing (SAH), representing 11.9% of renter households. However, a substantial number of households—around 227,100—were still waiting for access to SAH. Among those on the waitlist, nearly twice as many households (148,200) reported waiting two years or longer, compared to those waiting less than two years (76,000). Notably, 1.8% of the 4.1 million senior-led households in Canada were on a waitlist for SAH, with roughly seven in ten waiting for more than two years. Between 2018 and 2021, average monthly shelter costs, including rent or mortgages, utilities, property taxes, and condo fees, increased by 7.0% across the provinces. Despite a decrease in the number of households living in unaffordable housing, vulnerable populations, including senior renters, continue to face significant affordability challenges.<br>
+      Senior renters living alone, who make up a substantial portion of the aging population, are particularly vulnerable. In 2021, 49.0% of lone senior renters were living in unaffordable housing, a rate nearly three times higher than that of senior homeowners living alone (18.8%). Among lone seniors in non-SAH housing, the situation is even more acute, with 55.0% living in unaffordable housing, compared to 31.0% of those in SAH (The Daily — Housing Challenges Remain for Vulnerable Populations in 2021).<br>
+      In cities like Montreal, older low-income tenants face increasing risks of being displaced. This happens because rents rise due to gentrification. Seniors often live on fixed incomes, such as public pensions. Many cannot afford these rising rents. When rents become too high, they may have to move out or face eviction. This causes many problems. Moving can disrupt their social networks and make it harder to access healthcare. It can also lead to feelings of isolation, which harms their mental health (Simard, 2020). Similar problems exist in Hamilton. Rising rents have pushed seniors out of central neighborhoods. Many are forced to move to areas further away that are more affordable. However, these areas often lack healthcare services. This makes it harder for seniors to access important services like dementia care (Simard, 2020). Twigge Molecey (2023) calls this “exclusionary displacement.” This term describes how seniors are pushed into areas with fewer services and less access to what they need.<br>
+      This study focuses on how rising housing costs in Hamilton affect low-income senior renters. It looks at how these costs have displaced seniors from central areas to suburban or less-served regions. The study also examines the impact of this displacement on their ability to access healthcare services, including dementia care. Past research has shown that rising rents often lead to displacement among low-income populations. This study will test whether similar trends exist in Hamilton’s housing market.<br>
+      Although many studies have examined how rising housing costs affect vulnerable groups, there is less focus on seniors in Hamilton. This study uses ideas from past research on displacement and housing affordability. It applies these ideas to Hamilton’s situation. The study analyzes housing price trends, senior population movements, and access to transit and healthcare. By doing so, it sheds light on how displacement deepens inequalities in access to care for seniors in Hamilton.<br>
+      This research focuses on the question: <strong>How do rising rents influence the displacement of low-income senior rentals in Hamilton, and how does this displacement impact their accessibility to dementia care facilities? </strong>It explores these issues with the goal of understanding the unique challenges faced by seniors in this city.
   </div>
 <!-- Methods -->
-  <h2 id="methodology" class="map-subtitle">Methodology</h2>
+  <h2 id="background" class="map-subtitle">Background</h2>
   <div class="description">
-      <d><strong id="data_collection">1. Data Collection and Sources </strong><br></d>
-      <d>The data for this story map analysis was gathered from multiple reliable sources to explore the impact of rising housing costs on Hamilton’s seniors. The data sources included:<br>
-      <ul>
-        <d><strong>• Canada Mortgage and Housing Corporation </strong> (2019, 2020, 2023) provided rental market information for the Hamilton Census Metropolitan Area (CMA).<br>
-        <strong>• City of Hamilton Open Data Portal</strong> (2016, 2021) for census, income, and bus stop data.<br>
-        <strong>• Ontario Geohub</strong> (2023) provided healthcare facility locations across Ontario.<br>
-        <strong>• Statistics Canada </strong> (2021) provided census data regarding population statistics and senior demographics for Hamilton CMA.</d>
-      </ul>
+      <d><strong id="housing_market_trends">1. Housing Market Trends (2019-2023) </strong><br></d>
+      <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"
+      ><z>Figure 1: Hamilton CMA Zone Distribution 2020 (source: Rental Market Report - Hamilton CMA - Date Releases - 2020)</z><br>
+      <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"
+      ><z>Chart 1: Comparison of Hamilton CMA Rent Prices by Zone 2019 to 2023 (source: CMHC’s Rental Market Survey 2019 and 2023, Hamilton CMA, Private Row (Townhouse) and Apartment Average Rents ($), by Zone and Bedroom Type)</z><br>
+      <d>Between 2019 and 2023, Hamilton experienced clear rent increases across its nine zones, as shown in the graph and the zone map. The average rent prices rose significantly, reflecting growing affordability challenges across the city.<br>
+        <ul>
+          <d><strong>I. Zones with the Largest Rent Increases:</strong><br>
+          <ul>
+            <d>• Zone 09 (Ancaster/Dundas/Flamborough/Glanbrook) had the highest average rent price in 2023, reaching approximately $1,800, compared to around $1,200 in 2019.<br>
+            • Zone 08 (Burlington) also saw a sharp increase, with rents rising from about $1,400 in 2019 to over $1,750 in 2023.<br></d>
+          </ul>
+          </d>
+          <d><strong>II. Moderate Increases in Central Zones:</strong><br>
+          <ul>
+            <d>• In Zone 04 (Central) and Zone 01 (Downtown Core), average rents climbed to about $1,400 in 2023, up from around $1,000 in 2019.<br></d>
+          </ul>
+          </d>
+          <d><strong>III. Affordability in Central East and East End:</strong><br>
+          <ul>
+            <d>• Zone 02 (Central East) and Zone 03 (East End) remained relatively lower in rent price but still increased by nearly $300–$400 on average.<br></d>
+          </ul>
+          </d>
+        </ul>
+      <d>These trends demonstrate that while central neighborhoods remain moderately priced, the peripheral zones such as <strong>Zone 09</strong> and <strong>Zone 08</strong> have seen the steepest increases, reflecting an affordability crisis.<br>
+      <d><strong id="aging_population">2. Hamilton’s aging population (2016-2021) </strong><br></d>
+      <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"
+      ><z>Figure 2: Comparison of Senior Distribution of 2016 and 2021 in Hamilton CD (source: City of Hamilton Open Data Portal, Census Data, 2016 and 2021)</z><br>
+      <d>From figure 1’s legend intervals, it could see that senior distribution across Hamilton city has increased, with the max ratio from 23.8% to 26.94% and min 10.88% to 11.43%. In comparison both year’s senior distribution, Ward 13 has grown by 31% from 2016 to 2021. Similarly, Ward 10 and Ward 12, both located on the outskirts of Hamilton, each saw an increase of 2.0%. In contrast, Ward 1, situated in the central part of the city, experienced a slight decline of -0.07% in senior population density. This suggests that some seniors in this area may have been displaced, likely due to rising rents that exceed the financial capacity of those living on fixed incomes.<br>
+      This pattern aligns with the concept of “exclusionary displacement,” as described by Twigge Molecey (2023). Seniors unable to afford increasing rents in central areas are forced to move to less expensive neighborhoods, which often lack the services and amenities they previously relied on. While Hamilton’s overall senior population is growing, much of this growth is concentrated in peripheral wards. Central areas, where healthcare and other essential services are typically more accessible, show little to no growth.<br>
+      This trend is critical to the study as it highlights the link between rising housing costs and senior displacement. Seniors relocating to peripheral areas face significant challenges, particularly in accessing dementia care facilities and essential healthcare services. Understanding these patterns helps illustrate how housing affordability issues affect seniors’ quality of life and underscores the importance of analyzing their access to healthcare and transit as part of the displacement process.<br>
       </d>
-      <d><strong id="data_processing">2. Data Preparation and Processing </strong><br></d>
-      <d>Data processing was performed using Python, leveraging data analysis libraries including <strong>pandas and <strong>geopandas for efficient handling of spatial and tabular data. The main steps included:<br>
+      <d><strong id="peripheral_access">3. Peripheral accessibility challenges </strong><br></d>
+      <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"
+      ><z>Figure 2: Hamilton Bus Stops and Healthcare facility distribution. (source: City of Hamilton Open Data Portal, HSR Transit Feed, GTFS data 2024; Ontario GeoHub, Ministry of Health service provider locations, 2024)</z><br>
+      <d> Figure 2 demonstrates the distribution of Bus stops and senior related Healthcare facilities across hamilton city. </d>
       <ul>
-        <d><strong>I. Loading Data: </strong>Shapefiles for ward boundaries and CSV files for healthcare services (long-term care, pharmacies, bus stops, and health facilities) were loaded into GeoDataFrames using <strong>geopandas</strong>.<br>
-        <strong>II. Data Standardization:</strong> Column names were standardized across all datasets to maintain consistency and avoid processing errors.<br>
-        <strong>III. Spatial Joins:</strong> The facility and service datasets were spatially joined with ward geometries, assigning each facility to its respective ward. This enabled a spatial understanding of the service distribution.<br>
-        <strong>IV. Area Calculation:</strong> Ward areas were computed in square kilometers to facilitate the calculation of facility density.</d>
+        <d><strong>Access to Healthcare Facilities</strong><br>
+        The distribution of healthcare facilities across Hamilton reveals significant gaps between central and peripheral wards. The map shows a dense cluster of healthcare facilities, including dementia care centers, in the central wards such as Wards 1, 2, and 3. These areas provide relatively better access to essential health services for seniors.<br>
+        In contrast, peripheral wards such as Ward 13 (Ancaster/Dundas), Ward 12 (West End), and Ward 15 (Flamborough) have noticeably fewer healthcare facilities. The lack of healthcare services in these areas poses challenges for seniors who may have been displaced from central neighborhoods. Seniors living in these wards must travel greater distances to access healthcare, which can be particularly difficult for those with mobility limitations or those requiring frequent visits to specialized dementia care facilities.<br>
+        <strong>Access to Public Transit</strong><br>
+        The map also highlights the uneven distribution of bus stops across Hamilton. In central wards like Ward 1, 2, and 3, the density of bus stops is significantly higher, ensuring good public transit coverage. Seniors living in these areas have more reliable access to transportation, which helps them reach healthcare facilities and other services with relative ease.<br>
+        However, transit coverage is much sparser in peripheral wards such as Ward 13, 15, and 12. These areas have far fewer bus stops, with many neighborhoods located far from the nearest public transit route. For example, Ward 13 has only a handful of bus stops scattered across a large area, leaving much of the ward underserved. This limited access to public transit further compounds the challenges seniors face, as they may have to rely on costly alternatives like private transportation or endure long travel times to access healthcare.<br></d>
       </ul>
-      <d><strong id="facility_density">3. Facility Density and Weighted Accessibility </strong><br></d>
-      <d>To understand the accessibility landscape across Hamilton’s wards, facility density and weighted accessibility calculations were conducted.<br>
-      <ul>
-        <d><strong>I. Facility Density Calculation: </strong>Using <strong>panda</strong>, we aggregated the counts of long-term care facilities, pharmacies, bus stops, and health facilities for each ward. These counts were divided by the ward area to derive the density (per square kilometer) for each facility type.<br>
-        <strong>II. Weighted Facility Density:</strong> A combined facility density index was calculated by applying weights to the different facility types to emphasize their significance for elderly residents. The weights also considered the percentage of senior populations in each ward, providing an equitable approach to accessibility calculation.<br></d>
-      </ul>
-      </d>
-      <d><strong id="accessibility_analysis">4. Spatial Accessibility Analysis </strong><br></d>
-      <d>The accessibility to dementia care facilities and bus stops was analyzed by leveraging the Hamilton street network. This analysis focused on calculating how accessible the facilities were for residents in each ward.<br>
-      <ul>
-        <d><strong>I. Street Network Analysis: </strong>The street network was extracted using <strong>osmnx</strong>, which allowed for a network-based approach to assess connectivity and walking accessibility within Hamilton.<br>
-        <strong>II. Nearest Facility and Accessibility Calculation: </strong> Using a <strong>KD-Tree</strong> from <strong>scipy.spatial</strong>, we conducted nearest-neighbor searches to determine the closest dementia care facilities and bus stops to each ward centroid. The <strong>networkx</strong> library was used for shortest path calculations, providing insights into the network distance from the wards to these key facilities. Accessibility rates were computed as weighted averages, with weights inversely proportional to the distance, highlighting how ease of access decreases with increased distance.<br></d>
-      </ul>
-      </d>
-      <d><strong id="classification_visualization">5. Data Classification and Visualization </strong><br></d>
-      <ul>
-        <d><strong>• Classification: Natural Breaks (Jenks)</strong> classification was applied using the <strong>mapclassify</strong> library to categorize combined facility densities into distinct groups. This classification method helped highlight disparities in facility access across wards.<br>
-        <strong>• Visualization:</strong> Data visualization was conducted using <strong>matplotlib</strong> and <strong>contextily</strong> to generate both bar charts and geographic maps. These visualizations illustrated facility density, accessibility rates, and ward-specific characteristics, allowing for an in-depth comparison of the availability of services for seniors across Hamilton.<br></d>
-      </ul>
-      <d><strong id="tools">6. Tools and Models Utilized </strong></d>
+    </d>
+      <d><strong id="tools">4. Tools and Models Utilized </strong></d>
       <ul>
         <d><strong>• Data Analysis: pandas</strong> and <strong>geopandas</strong> for data manipulation.<br>
         <strong>• Spatial Joins: </strong> Conducted using <strong>geopandas</strong> to merge ward data with facilities and services.<br>
@@ -136,11 +142,89 @@ permalink: /projects/senior_displacement/
         <strong>• Classification: Natural Breaks (Jenks)</strong> using <strong>mapclassify</strong> to classify facility densities.<br>
         <strong>• Data Visualization: matplotlib</strong> for plotting maps and charts, with <strong>contextily</strong> used for basemap integration.<br></d>
       </ul>
-  <h2 class="map-subtitle">Analysis</h2>
-  <h2 id="senior_renters" class="map-subtitle">Mapping Senior Renters and Vulnerable Wards</h2>
+  <h2 class="methodology">Methodology</h2>
+  <h2 id="data_source" class="map-subtitle">Data Source</h2>
   <div class="description">
-      <d>
-      This step combines the visualization of senior renters' distribution and their socioeconomic vulnerability across Hamilton, presenting a cohesive analysis of the challenges they face. By integrating data on senior population density, renter occupancy, and vulnerability scores, we gain a clearer understanding of how housing unaffordability and displacement affect low-income senior renters.<br></d>
+        <ul>
+          <d><strong>Census Data (2016 and 2021): </strong><br>
+          This dataset provides information on senior population densities, renter occupancy rates, rent burden, and LIM rate across Hamilton’s wards. It captures historical trends over a five-year period, serving as the foundation for understanding shifts in senior population and vulnerability dynamics.</d><br>
+          <d><strong>Housing Price Trends (2019–2023):</strong><br>
+          Housing price data from the Canada Mortgage and Housing Corporation (CMHC) tracks affordability trends over the past five years. These data are aggregated by CMHC zones rather than wards, highlighting how evolving housing costs have influenced displacement and affordability issues during the recent housing market changes.</d><br>
+          <d><strong>Transit and Healthcare Data (2024):</strong><br>
+          This dataset includes the most up-to-date locations of General Transit Feed Specification (GTFS) bus stops and Ontario healthcare facilities focused on senior-related services in Hamilton and across Ontario. The healthcare facilities are categorized by specific service types to align with the needs of senior populations. The selected facility types are:
+          <ul><strong>
+            Seniors Active Living Centres<br>
+            Retirement Homes<br>
+            Mental Health and Addiction Organizations<br>
+            Long-Term Care Homes<br>
+            Community Support Services<br></strong>         
+          </ul>
+          This data provides a detailed and updated view of the transit and healthcare infrastructure that supports seniors in Hamilton and Ontario. By integrating GTFS bus stops and healthcare facility locations, the dataset enables a comprehensive assessment of accessibility challenges faced by displaced seniors.
+          </d>
+        </ul>
+      <ul>
+      <d>This step combines the visualization of senior renters' distribution and their socioeconomic vulnerability across Hamilton, presenting a cohesive analysis of the challenges they face. By integrating data on senior population density, renter occupancy, and vulnerability scores, we gain a clearer understanding of how housing unaffordability and displacement affect low-income senior renters.</d></ul>
+  </div>
+  <h2 id="methods" class="map-subtitle">Methods</h2>
+  <div class="description">
+  <d>Based on literature reviewing Hallisey et al. and Tan et al. ‘s articles on facilities accessible related analysis, this study choose to use the population weighted centroid of each ward as the focal point, to analysis the accessibility to bus stops with isochorne (400m, 600m, 800m) (Lindén, 2021), and then calculate the centroid of bus stops in each ward to find their accessible healthcare facilities with isochron (5min, 10 min 15 min)(Dijck, 2024). Combine witht the vulnerable score (30% senior ration + 30% Renter occupancy + 20% rent burden + 20% low income measure (LIM)rate) of each ward, and Ward-level rent prices are integrated into the analysis to capture the affordability dimension. Combining rent data with vulnerability and accessibility scores, a final composite score is assigned to each ward, highlighting disparities in housing affordability, healthcare access, and transit connectivity.</d>
+          <d><strong>Population weighted centroid: </strong><br>
+         The use of population-weighted centroids in this study reflects a key principle of spatial optimization: balancing demand and proximity to enhance equity and efficiency in resource allocation. Drawing on the methodologies outlined by Hallisey et al. and Tan et al., this approach focuses on public health and senior accessibility, highlighting geographic clusters where seniors face challenges in housing, healthcare, and transit accessibility. By emphasizing housing-related vulnerabilities, the methodology aligns with the study's goal of understanding and addressing disparities in accessibility for vulnerable senior populations. This method is choosen because:<br>
+         <ul>
+            1. <strong>Enhanced Accuracy: </strong>Unlike geometric centroids, which represent the geometric center of a polygon, population-weighted centroids account for the actual distribution of seniors within each ward. This makes them more relevant for analyses of accessibility and equity.<br>
+            2. <strong>Resource Optimization: </strong>Inspired by competitive facility location principles, the population-weighted centroid ensures that resources such as healthcare and transit services are positioned closer to high-need populations, improving equity in service delivery.<br>
+            3. <strong>Foundation for Isochrone Calculations: </strong>These centroids provide the starting points for creating walking and transit isochrones, ensuring that accessibility assessments reflect real-world population clusters rather than abstract geographic centers.<br>
+         </ul>
+         Data Sources:<br>
+         <ul>
+            1. <strong>Ward Boundaries: </strong> Geospatial data containing the boundaries of Hamilton's wards. <br>
+            2. <strong>Population Data: </strong> A point-based dataset indicating the spatial distribution of seniors aged 65 and older, with each point linked to a population value.<br>
+         </ul>
+         Population-Weighted Centroids Formular:<br>
+         <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"><z>Population Weighted Centroid Formular</z><br>
+        </d>
+        <d><strong>Vulnerability Score: </strong><br>
+         The vulnerability score is a composite index developed to evaluate the relative risk of senior displacement and accessibility challenges across Hamilton’s wards. This score combines multiple indicators, each weighted to reflect its contribution to housing vulnerability. The methodology aims to provide a comprehensive measure of vulnerability by accounting for the economic, social, and housing-related pressures faced by seniors. Drawing on insights from Lee and Van Zandt (2019), the inclusion of these indicators highlights the multifaceted risks of displacement and resource inaccessibility, aligning with the study’s goals of identifying and addressing inequities in senior housing and care accessibility.<br>
+         Indicators and Weights <br>
+         <ul>
+            1. <strong>Senior Ratio (30%): </strong> Seniors, particularly low-income seniors, are disproportionately vulnerable due to fixed incomes, limited mobility, and dependence on nearby healthcare and transit services. Lee and Van Zandt (2019) emphasize that seniors face heightened risks of displacement because they are less able to relocate in response to rising rents. Including this indicator ensures that wards with high senior populations are appropriately prioritized for assessment.<br>
+            2. <strong>Renter Occupancy (30%): </strong>Renters are significantly more vulnerable than homeowners in most cases due to:<br>
+            <ul>
+            - Limited Financial Resources: Renters often lack savings or housing stability to cope with rising costs.<br>
+            - Poor Housing Conditions: Rental units tend to be older and less resilient to economic or environmental shocks.<br>
+            - Forced Relocation: Renters face higher displacement risks due to eviction, redevelopment, or disaster (Lee & Van Zandt, 2019).<br>
+            3. <strong>Rent Burden (20%): </strong>Rent burden, defined as households spending over 30% of income on housing, exacerbates vulnerability by forcing renters to make trade-offs in essential expenses such as food, healthcare, and transportation. Severe rent burdens (>50% of income) amplify displacement risks, creating a cascading effect on living standards. Studies on rent affordability highlight its direct link to housing insecurity, justifying a 20% weight in the vulnerability score.<br>
+            4. <strong>Low-Income Measure (LIM) Rate (20%): </strong>Income remains a fundamental driver of housing vulnerability. Low-income households lack the financial flexibility to absorb rising rents or relocation costs, leaving them at greater risk of displacement. Additionally, these households have fewer resources to advocate for affordable housing policies or adapt to market pressures. Incorporating the Low-Income Measure (LIM) captures the economic challenges faced by this group, supporting its inclusion as a 20% weighted indicator.<br>
+         </ul>
+         Data Sources: Data on senior ratios, renter occupancy, rent burdens, and LIM rates were collected for each ward in 2016 and 2021.<br>
+         Standardization: Data on senior ratios, renter occupancy, rent burdens, and LIM rates were collected for each ward in 2016 and 2021.<br>
+         <strong>Accessibility Score Methods</strong><br>
+         <img 
+          class="map-image" 
+          src="/assets/images/renter_distribution.jpg" 
+          alt="accessibility_hamilton"><z>Population Weighted Centroid Formular</z><br>
+        </d>
+      
+          <d><strong>Housing Price Trends (2019–2023):</strong><br>
+          Housing price data from the Canada Mortgage and Housing Corporation (CMHC) tracks affordability trends over the past five years. These data are aggregated by CMHC zones rather than wards, highlighting how evolving housing costs have influenced displacement and affordability issues during the recent housing market changes.</d><br>
+          <d><strong>Transit and Healthcare Data (2024):</strong><br>
+          This dataset includes the most up-to-date locations of General Transit Feed Specification (GTFS) bus stops and Ontario healthcare facilities focused on senior-related services in Hamilton and across Ontario. The healthcare facilities are categorized by specific service types to align with the needs of senior populations. The selected facility types are:
+          <ul><strong>
+            Seniors Active Living Centres<br>
+            Retirement Homes<br>
+            Mental Health and Addiction Organizations<br>
+            Long-Term Care Homes<br>
+            Community Support Services<br></strong>         
+          </ul>
+          This data provides a detailed and updated view of the transit and healthcare infrastructure that supports seniors in Hamilton and Ontario. By integrating GTFS bus stops and healthcare facility locations, the dataset enables a comprehensive assessment of accessibility challenges faced by displaced seniors.
+          </d>
+        </ul>
+      <ul>
+      <d>This step combines the visualization of senior renters' distribution and their socioeconomic vulnerability across Hamilton, presenting a cohesive analysis of the challenges they face. By integrating data on senior population density, renter occupancy, and vulnerability scores, we gain a clearer understanding of how housing unaffordability and displacement affect low-income senior renters.</d></ul>
+  </div>
       <d><strong id="renters_distribution">1. Senior Renters' Distribution:</strong><br></d>
       <img 
           class="map-image" 
