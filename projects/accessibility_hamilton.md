@@ -7,15 +7,15 @@ permalink: /projects/accessibility_hamilton/
 <!-- Wrap the entire content in a project-container div -->
 <div class="project-container">
 
-  <h1 class="project-title">GGR377 Assignment 2</h1>
+  <h1 class="project-title">Final Report</h1>
   <h1 class="project-title">Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors</h1>
   <h3 class="map-subtitle">Project Summary</h3>
   <t class="description">This story map explores the intersection of housing affordability, accessibility to healthcare, and public transit availability for Hamilton's low-income senior renters. Between two census years, rising rents and the loss of affordable housing have displaced many seniors from central neighborhoods to peripheral areas, where they face limited access to essential services. The analysis reveals significant disparities in healthcare infrastructure, with central wards benefiting from higher densities of dementia care facilities, pharmacies, bus stops, and long-term care services, while peripheral wards remain underserved.<br>By integrating data-driven maps and socioeconomic indicators, the story map highlights how these disparities isolate seniors socially and economically, creating barriers to healthcare and mobility. It underscores the urgent need for equitable urban planning policies, including improved transit connectivity, expanded healthcare infrastructure, and affordable senior housing, to ensure Hamilton's aging population remains connected to their communities and essential resources. <br></t>
 
-  <t class="description"><br><strong>Project: </strong>GGR377 Assignment 2: Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors</t>
+  <t class="description"><br><strong>Project: </strong>GGR377 Final Report: Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors</t>
   <t class="description"><br><strong>Instructor: </strong>Karen Chapple</t>
   <t class="description"><br><strong>Author: </strong>Zhuoxinran(Zoe) Li</t>
-  <t class="description"><br><strong>Time: </strong>2024, Nov to Dec (exp.)</t>
+  <t class="description"><br><strong>Time: </strong>2024, Dec</t>
   <t><br><strong>Skills:</strong> ArcGIS Pro, Python, OpenStreetMap<br><br></t>
 
   <!-- Embed ArcGIS Dashboard -->
