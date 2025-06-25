@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toronto Child Care & Transit Proximity Dashboard</title>
+  <link rel="stylesheet" href="/projects.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="project-container project-detail-page">
+
+    <h1 class="project-title">Toronto Child Care & Transit Proximity Dashboard</h1>
+
+    <h3 class="map-subtitle">Project Summary</h3>
+    <div class="project-summary-text">
+      <p>This individual project uses a dashboard to allow users to explore child care centers in Toronto and their proximity to transit routes. It provides detailed information on each center, including age groups served, fee subsidies, and contact details, while highlighting nearby transit options for easy access. Powered by data from Toronto Open Data and Metrolinx, this tool helps users efficiently assess both child care options and transit convenience.</p>
+
+      <p>
+        <strong>Instructor:</strong> Lindsey Smith<br>
+        <strong>Time:</strong> Created: Dec 8, 2023; Last updated: Sep 4, 2024<br>
+        <strong>Skills:</strong> ArcGIS Pro, Dashboard ArcGIS Online
+      </p>
+    </div>
+
+    <div class="map-description">
+      <h3>Interactive Exploration of Child Care & Transit</h3>
+      <p>This interactive dashboard allows users to explore licensed child care centers in Toronto, while also assessing their proximity to public transit routes. Users can start by zooming into their desired neighborhood on the map, which will display relevant child care centers in the "Directory of Child Care Organizations" panel. For each center, general information such as operating auspices, availability of fee subsidies, and contact details are provided.</p>
+      <p>A bar chart to the right of the directory visualizes the age ranges served by each child care center, making it easier for users to find options that cater to specific age groups. Additionally, the "Proximity of Transit Lanes to Child Care Organizations" panel highlights nearby transit routes, helping users evaluate how accessible each center is via Toronto's public transit system.</p>
+      <p>The dashboard uses data from the Toronto Open Data Portal and Metrolinx to map child care centers and transit networks. It is built using the WGS 1984 coordinate system and Web Mercator projection for web use, with a "Streets (Night)" base map. The tool was created by Zhuoxinran Li on December 8, 2023, and was last updated on September 4, 2024.</p>
+      <p><strong>Reference:</strong> City of Toronto, Province of Ontario, Esri Canada, Esri, HERE, Garmin, SafeGraph, METI/NASA, USGS, EPA, NPS, USDA, NRCan, Parks Canada</p>
+    </div>
+
+    <!-- Dashboard Embed -->
+    <div class="arcgis-section">
+    <iframe 
+        class="arcgis-container"
+        src="https://www.arcgis.com/apps/dashboards/b5121dec467b4886b853cfa380b91ec5"
+        allowfullscreen>
+    </iframe>
+    </div>
+
+    <a href="/projects.html" class="btn btn-light rounded-circle back-to-gallery-btn" title="Back to Projects">
+        <i class="bi bi-house"></i>
+    </a>
+
+  </div>
+</body>
+</html>

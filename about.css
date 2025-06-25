@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+.about-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10%;
+  background: none;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+.intro-text {
+  flex: 1;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 68px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  line-height: 1.2;
+}
+
+.intro-text h1 .zh {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 500;
+  font-size: 48px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+.intro-photo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.intro-photo img {
+  height: 100vh;
+  width: auto;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 60px 15% 40px;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.fade-in {
+  animation: fadeIn 1.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .intro-text {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .intro-photo img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+#audio-player {
+  display: none;
+}
+
+.back-to-gallery-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background-color: rgba(255, 255, 255, 0.6); /* 半透明背景 */
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #333;
+  z-index: 9999;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-gallery-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}

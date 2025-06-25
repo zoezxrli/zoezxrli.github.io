@@ -1,224 +1,108 @@
----
-layout: page
-title: Projects
-pagination:
-    enabled: true
-permanantlink: /Projects/
----
-
-<!-- 
-<section class="list">
-    {% for post in site.posts %}
-        {% if post.projects %}
-            {% include blog-post.html %}
-        {% endif %}
-    {% endfor %}
-</section>
-
-
-<section class="list">
-    {% if site.posts.size == 0 %}
-    <p class="text-center">Nothing published yet!</p>
-    {% elsif site.pagination.enabled %} {% for post in paginator.posts %} {% if
-    post.category == 'blog' %} {% if post.hidden != true %} {% include
-    blog-post.html %} {% endif %} {% endif %} {% endfor %} {% include
-    pagination.html%} {% else %} {% for post in site.posts %} {% if
-    post.category == 'blog' %} {% if post.hidden != true %} {% include
-    blog-post.html %} {% endif %} {% endif %} {% endfor %} {% endif %}
-</section> -->
-
-
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Overview</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .content-container {
-            max-width: 800px;  /* Limit the width of the content */
-            margin: 0 auto;  /* Center the content */
-            padding: 20px;  /* Add padding for spacing */
-            text-align: center;  /* Center-align the text */
-        }
-
-        .toc h2 {
-            color: #333;  /* Change the color of the TOC heading */
-            font-size: 2.5rem;  /* Resize TOC heading */
-        }
-
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0; /* Remove default margin */
-            text-align: left; /* Left-align the list items */
-            display: inline-block; /* Align list items left while keeping centered block */
-        }
-
-        .toc ul ul {
-            padding-left: 20px;  /* Indent nested lists */
-        }
-
-        .toc li {
-            color: #555;  /* Change the text color */
-            font-size: 1.6rem;  /* Change the text size */
-            margin-bottom: 10px;  /* Add space between list items */
-        }
-
-        .toc a {
-            text-decoration: none;
-            color: #0077cc;  /* Link color */
-            font-weight: bold;  /* Make the link text bold */
-        }
-
-        .toc a:hover {
-            text-decoration: underline;
-        }
-
-        .divider {
-            width: 100%;  /* Set width to 90% of viewport */
-            height: 2px;  /* Divider height */
-            background-color: #ddd;  /* Divider color */
-            margin: 30px auto;  /* Center and add spacing around divider */
-        }
-
-        .map-section {
-            margin-bottom: 50px;  /* Add space below each map section */
-        }
-    </style>
-</head>
-
-<body> -->
-
-<!-- <div class="content-container">
-    Table of Contents
-    <nav class="toc">
-        <h1>Contents</h1>
-        <ul>
-            <h2><a href="/projects/publications/">1. Publications</a></h2>
-            
-            <h2>2. Visualization Projects</h2>
-            <ul>
-                <h3><a href="/projects/toronto-child-care-transit/">2.1 Toronto Child Care & Transit Proximity Dashboard</a></h3>  <!-- Link updated -->
-                <!-- <h3><a href="/projects/toronto-health-service-map/">2.2 Toronto Health Services Map with Language-Based Selection</a></h3>  Link to another new page
-                <h3><a href="/projects/toronto-tornado-track/">2.3 Toronto Tornado Track Animation</a></h3>  <!-- Link to another new page -->
-                <!-- <h3><a href="/projects/chicago-livability/">2.4 Chicago 77 Neighbourhoods Livability</a></h3>
-            </ul>
-        </ul>
-    </nav>
-</div>
-    
-</body> -->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Overview</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .content-container {
-            max-width: 800px;  /* Limit the width of the content */
-            margin: 0 auto;  /* Center the content */
-            padding: 20px;  /* Add padding for spacing */
-            text-align: center;  /* Center-align the text */
-            color: #0077cc
-        }
-
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3列布局 */
-            gap: 20px; /* 每个项目之间的间距 */
-            max-width: 1200px; /* 限制内容宽度 */
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .project {
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .project img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .project:hover img {
-            transform: scale(1.05); /* 鼠标悬停时放大图片 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-title {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: #0077cc;
-            font-weight: bold;
-        }
-
-        .project-title:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Projects Overview</title>
+  <link rel="stylesheet" href="projects.css" />
 </head>
-
 <body>
-    <!-- <div class="content-container">
-        <h1>Proke</h1>
-    </div> -->
-    <div class="projects-container">
-        <!-- Publications section -->
-        <a href="/projects/publications/" class="project">
-            <img src="/assets/images/publication.jpg" alt="Publications">
-            <p class="project-title">Publications</p>
-        </a>
+  <div class="projects-container">
 
-        <!-- Other Projects -->
-        <a href="https://zoezxrli.github.io/collision_toronto/" class="project" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/images/toronto_collision.jpg" alt="Toronto Collision">
-            <p class="project-title">Toronto Collision Web Map</p>
-        </a>
-        <a href="https://zoezxrli.github.io/ggr472_notes_of_toronto/" class="project" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/images/radiu3.jpg" alt="Radiu3 Toronto">
-            <p class="project-title">Notes from the Radiu3 Web Map</p>
-        </a>
-        <a href="/projects/senior_displacement/" class="project">
-            <img src="/assets/images/access_hamilton.jpg" alt="Senior Displacement">
-            <p class="project-title">Senior Renters Displacement in Hamilton</p>
-        </a>
-        <!-- <a href="/projects/accessibility_hamilton/" class="project">
-            <img src="/assets/images/access_hamilton.jpg" alt="GGR377 Rising Rents and Senior Care in Hamilton">
-            <p class="project-title">Rising Rents and Senior Care in Hamilton</p>
-        </a> -->
-        <a href="/projects/folium/" class="project">
-            <img src="/assets/images/geospatial.jpg" alt="Geospatial Data Visualization using Python and Folium">
-            <p class="project-title">Geospatial Data Visualization using Python and Folium</p>
-        </a>
-        <a href="/projects/toronto-child-care-transit/" class="project">
-            <img src="/assets/images/toronto_child.jpg" alt="Toronto Child Care & Transit Proximity Dashboard">
-            <p class="project-title">Toronto Child Care & Transit Proximity Dashboard</p>
-        </a>
-        <a href="/projects/toronto-health-service-map/" class="project">
-            <img src="/assets/images/toronto_health.jpg" alt="Toronto Health Services Map with Language-Based Selection">
-            <p class="project-title">Toronto Health Services Map</p>
-        </a>
-        <a href="/projects/toronto-tornado-track/" class="project">
-            <img src="/assets/images/tornado.jpg" alt="Toronto Tornado Track Animation">
-            <p class="project-title">Toronto Tornado Track Animation</p>
-        </a>
-        <a href="/projects/chicago-livability/" class="project">
-            <img src="/assets/images/chicago.jpg" alt="Chicago 77 Neighbourhoods Livability">
-            <p class="project-title">Chicago 77 Neighbourhoods Livability</p>
-        </a>
+    <div class="project-block reverse">
+      <div class="project-image">
+        <img src="/assets/projects/cover/toronto_ev_charging.jpg" alt="EV Charging">
+      </div>
+      <div class="project-description">
+        <h3>Toronto EV Charging Accessibility Map</h3>
+        <p>As Toronto accelerates its push toward net-zero by 2040, this interactive map identifies underserved neighborhoods with high EV charging demand across 585 census tracts. Using a composite scoring system based on EV ownership, apartment density, transit access, and income levels, the tool helps planners and policymakers prioritize equitable, data-driven charging infrastructure expansion.</p>
+        <a href="/projects/toronto_ev_charging.html" class="view-btn" target="_blank">View Project →</a>
+      </div>
     </div>
 
+    <div class="project-block">
+      <div class="project-image">
+        <img src="/assets/projects/cover/toronto_collision.jpg" alt="Toronto Collision">
+      </div>
+      <div class="project-description">
+        <h3>Toronto Collision Web Map</h3>
+        <p>An interactive hexbin web map built with Turf.js and Mapbox GL to visualize Toronto traffic collisions spatially and statistically.</p>
+        <a href="https://zoezxrli.github.io/collision_toronto/" class="view-btn" target="_blank">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-block reverse">
+      <div class="project-image">
+        <img src="/assets/projects/cover/radiu3.jpg" alt="Radiu3 Web Map">
+      </div>
+      <div class="project-description">
+        <h3>Notes from the Radiu3 Web Map</h3>
+        <p>A creative sound-story experience visualized through a custom web map built with Mapbox, showcasing music, film, and cultural data near U of T.</p>
+        <a href="https://zoezxrli.github.io/ggr472_notes_of_toronto/" class="view-btn" target="_blank">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-image">
+        <img src="/assets/projects/cover/map_hamilton.jpg" alt="Senior Displacement">
+      </div>
+      <div class="project-description">
+        <h3>Senior Renters Displacement in Hamilton</h3>
+        <p>This spatial analysis highlights the impact of rising rents on senior renters' access to dementia care using accessibility metrics and isochrones.</p>
+        <a href="/projects/accessibility_hamilton.html" class="view-btn" target="_blank">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-block reverse">
+      <div class="project-image">
+        <img src="/assets/projects/cover/geospatial.jpg" alt="Folium Python Visualization">
+      </div>
+      <div class="project-description">
+        <h3>Geospatial Data Visualization with Python & Folium</h3>
+        <p>Visualizes geographic data using Python and Folium, with a focus on rendering location patterns and clustering techniques.</p>
+        <a href="/projects/folium.html" class="view-btn">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-image">
+        <img src="/assets/projects/cover/toronto_child.jpg" alt="Child Care Transit">
+      </div>
+      <div class="project-description">
+        <h3>Toronto Child Care & Transit Dashboard</h3>
+        <p>An interactive dashboard that compares child care center locations with nearby transit infrastructure to support planning equity.</p>
+        <a href="/projects/toronto-child-care-transit.html" class="view-btn">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-block reverse">
+      <div class="project-image">
+        <img src="/assets/projects/cover/toronto_health.jpg" alt="Toronto Health Services">
+      </div>
+      <div class="project-description">
+        <h3>Toronto Health Services Map</h3>
+        <p>A multilingual-selectable interactive map built with Mapbox to show access to Toronto's public health resources by community.</p>
+        <a href="/projects/toronto-health-service-map.html" class="view-btn">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-image">
+        <img src="/assets/projects/cover/tornado.jpg" alt="Tornado Track">
+      </div>
+      <div class="project-description">
+        <h3>Toronto Tornado Track Animation</h3>
+        <p>Animated track of Toronto's tornado events using web map technology, temporal sequencing, and data storytelling for public awareness.</p>
+        <a href="/projects/toronto-tornado-track.html" class="view-btn">View Project →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="gallery.html" class="btn btn-light rounded-circle back-to-gallery-btn" title="Back to Gallery">
+    <i class="bi bi-house"></i>
+  </a>
+
 </body>
+</html>

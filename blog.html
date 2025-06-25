@@ -1,25 +1,37 @@
----
-# blog page must be named index.html and in its own folder to support pagination
-# https://jekyllrb.com/docs/pagination/
-layout: page
-title: Blog
-pagination:
-    enabled: true
-permanantlink: /Blog/
----
-<!-- Add Image Here -->
-<div class="blog-image-container">
-    <img src="/assets/images/juanjuan.gif" alt="Blog Header" class="blog-header-image" />
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Zoe's World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Blog</h1>
+    <p>Ideas, insights, and reflections from my journey across urbanism, data, and everything in between.</p>
 
-<div class="buttons-container">
-    <!-- Button for Bartending -->
-    <a href="/blog_page/bartending" class="button">Bartending</a>
+    <div class="grid">
+      <div class="card">
+        <h3>🌀 Why Cities Need Dreamers & Data</h3>
+        <p>Combining spatial analysis with imagination – a manifesto for future planners.</p>
+        <small>June 2025</small>
+      </div>
 
-    <!-- Button for Travel -->
-    <a href="/blog_page/travel" class="button">Travel</a>
+      <div class="card">
+        <h3>📦 Waste as Design: Capitalism’s Invisible Blueprint</h3>
+        <p>Reflections on structural waste, degrowth, and policy failures in modern systems.</p>
+        <small>April 2025</small>
+      </div>
 
-    <!-- Add more buttons as needed -->
-    <a href="/blog_page/tech.md" class="button">Tech</a>
-    <a href="/blog_page/lifestyle" class="button">Lifestyle</a>
-</div>
+      <div class="card">
+        <h3>🌊 Field Notes from the Flood Frontier</h3>
+        <p>What satellite data, street interviews, and vulnerability indices really say about urban resilience.</p>
+        <small>March 2025</small>
+      </div>
+    </div>
+
+    <a href="gallery.html" class="back-button">← Back to Explore</a>
+  </div>
+</body>
+</html>

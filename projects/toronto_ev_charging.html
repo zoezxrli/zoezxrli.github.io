@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toronto EV Charging Accessibility Map</title>
+  <link rel="stylesheet" href="/projects.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="project-container project-detail-page">
+    <h1 class="project-title">Toronto EV Charging Accessibility Map</h1>
+
+    <h3 class="map-subtitle">Project Summary</h3>
+    <div class="project-summary-text">
+        <p>As Toronto accelerates toward its Net-Zero by 2040 goals, access to public EV charging remains highly uneven across the city — particularly in low-income, high-density, and transit-oriented communities. This solo project, developed for the 2025 Esri Canada App Challenge, investigates spatial disparities in EV charging availability using a multi-criteria demand index across 585 census tracts.</p>
+        <p>Through a dual-interface deployment — a public-facing StoryMap and a planner-focused Experience Builder App — this project supports equitable transportation planning by revealing where policy, infrastructure, and socioeconomic stressors collide. The final map enables decision-makers to explore high-demand, underserved zones and download tract-level data for planning and grant support.</p>
+      <h4>Key Insights</h4>
+      <ul>
+        <li><strong>60%+ of high-demand zones</strong> are concentrated in apartment-dense neighborhoods where residents lack access to at-home chargers, which posing major equity concerns.</li>
+        <li><strong>30+ GO Train stations</strong> across Toronto are located in charging deserts, lacking public EV infrastructure within 500 meters, despite high commuter traffic.</li>
+        <li>Areas with <strong>both high EV ownership and low charger access</strong> (e.g., Scarborough, North York) highlight critical mismatches in deployment strategy.</li>
+        <li><strong>Transit-adjacent employment zones</strong> where long-distance commuters or rideshare drivers park. This shows demand for workplace charging that is not currently met.</li>
+        <li>The tool enables <strong>layered filtering</strong> of EV demand factors (housing, income, proximity) to help cities <strong>prioritize investment in the most infrastructure-poor neighborhoods</strong>.</li>
+      </ul>
+    
+      <p><strong>Instructor:</strong> Lindsey Smith<br>
+      <strong>Team:</strong> Zhuoxinran Li, William Chan<br>
+      <strong>Challenge:</strong> Esri Canada App Challenge 2025<br>
+      <strong>Skills:</strong> ArcGIS Pro, Experience Builder, StoryMap, buffer analysis, composite index design</p>
+    </div>
+
+    <div class="map-description">
+      <h4>Methods</h4>
+      <ul>
+        <li><strong>EV Demand Score:</strong> Developed a composite index using 6 weighted variables:
+          <ul>
+            <li>Proximity to underserved GO Train stations (+3 points)</li>
+            <li>Absence of public EV chargers (+3 points)</li>
+            <li>High percentage of low-income residents (LIM-AT) (+2 points if >20%)</li>
+            <li>High apartment density (5+ stories, where home charging is unavailable) (up to +4 points)</li>
+            <li>High EV ownership levels (up to +4 points)</li>
+            <li>Employment hubs (job centers requiring workplace chargers) (+2 points)</li>
+          </ul>
+          Assigned a final EV Demand Score to each census tract, classifying areas into low (0-4), medium (5-7), and high (8+) demand zones.
+        </li>
+        <li><strong>Proximity Analysis:</strong> 500m buffer around GO Train stations to detect charger gaps.</li>
+        <li><strong>Spatial Join:</strong> Allocated FSA-level EV ownership and employment zone data to census tracts.</li>
+        <li><strong>Layer Classification:</strong> Natural Breaks (Jenks) and Quantile for thematic visualization.</li>
+        <li><strong>UX Design:</strong> Experience Builder allows layer toggling, filtering, and data export (GeoJSON/CSV).</li>
+      </ul>
+    </div>
+
+    <div class="map-description">
+      <h4>Explore the Interfaces</h4>
+      <p><strong>ArcGIS StoryMap</strong> — A narrative tool designed for public communication and policy storytelling.</p>
+      <iframe class="arcgis-container" src="https://storymaps.arcgis.com/stories/c2fc27c751c342228c1b3526dd4e1607" allowfullscreen></iframe>
+
+      <p><strong>Experience Builder App</strong> — A tool for data filtering, layer toggling, and infrastructure prioritization.</p>
+      <iframe class="arcgis-container" src="https://experience.arcgis.com/experience/fcd57125fa084e3cad9df7c3804f6a9f" allowfullscreen></iframe>
+    </div>
+
+    <a href="/projects.html" class="btn btn-light rounded-circle back-to-gallery-btn" title="Back to Projects">
+      <i class="bi bi-house"></i>
+    </a>
+  </div>
+</body>
+</html>

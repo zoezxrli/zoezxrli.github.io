@@ -1,4 +1,54 @@
----
-layout: page
-title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zoe's World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ 顺序重要，Three.js > TweenMax > hover-effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/hover-effect@1.0.0/dist/hover-effect.umd.js"></script>
+</head>
+
+<body>
+  <!-- Canvas 动画挂载点 -->
+  <div id="gl-container"></div>
+
+  <!-- 中间的内容（可选） -->
+  <div class="center-content">
+    <h1>Zoe L.</h1>
+    <div class="description-box">
+      <p>Data-driven urban resilience advocate building safer, more just cities—especially for those most at risk. With a background in Human Geography & GIS from U of T and soon joining the MUI program, I translate spatial data into insights for flood resilience, climate equity, and inclusive design. Passionate about spatial justice, senior livability, and climate-ready infrastructure.</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/yigezhuoe/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/zhuoxinranli/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/zoezxrli" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="mailto:zxrli.zoe@gmail.com"><i class="bi bi-envelope"></i></a>
+    </div>
+    <a href="gallery.html" class="explore-btn">Explore</a>
+  </div>
+
+  <!-- 背景音乐 -->
+  <audio id="bg-music" autoplay loop muted>
+    <source src="assets/audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 黑胶旋转图标 -->
+  <div class="vinyl-wrapper" onclick="toggleMusic()">
+    <div class="click-label">
+      <span>Click Me</span>
+      <i class="bi bi-hand-index-thumb-fill"></i>
+    </div>
+    <img src="assets/vinyl.png" class="vinyl" id="vinyl-spin">
+  </div>
+
+  <!-- 放最后！保证 DOM 和脚本加载顺序 -->
+  <script src="main.js"></script>
+</body>
+</html>

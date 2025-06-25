@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Displacement and Dementia Care in Hamilton</title>
+  <link rel="stylesheet" href="/projects.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="project-container project-detail-page">
+    <h1 class="project-title">Displacement & Dementia Care: A GIS-Based Analysis of Senior Accessibility in Hamilton</h1>
+    <div class="project-intro-quote">
+          "How rising housing costs in Hamilton are pushing low-income seniors into care deserts — a spatial story revealed through GIS."
+    </div>
+    <h3 class="map-subtitle">Project Summary</h3>
+
+    <div class="project-summary-text">
+      <p>This story map explores the intersection of housing affordability, accessibility to healthcare, and public transit availability for Hamilton's low-income senior renters. Between two census years, rising rents and the loss of affordable housing have displaced many seniors from central neighborhoods to peripheral areas, where they face limited access to essential services. The analysis reveals significant disparities in healthcare infrastructure, with central wards benefiting from higher densities of dementia care facilities, pharmacies, bus stops, and long-term care services, while peripheral wards remain underserved.</p>
+      <p>By integrating data-driven maps and socioeconomic indicators, the story map highlights how these disparities isolate seniors socially and economically, creating barriers to healthcare and mobility. It underscores the urgent need for equitable urban planning policies, including improved transit connectivity, expanded healthcare infrastructure, and affordable senior housing, to ensure Hamilton's aging population remains connected to their communities and essential resources.</p>
+      <div class="info-tags">
+        <p><strong>Project:</strong> Final Project of GGR 377, Displacement and Dementia Care: The Impact of Rising Housing Costs on Hamilton's Seniors<br>
+        <strong>Instructor:</strong> Karen Chapple<br>
+        <strong>Author:</strong> Zhuoxinran (Zoe) Li<br>
+        <strong>Time:</strong> 2024, Dec<br>
+        <strong>Skills:</strong> ArcGIS Pro, Python, OpenStreetMap</p>
+      </div>
+      <div class="pdf-button">
+        <a href="/assets/projects/docs/Displacement and Dementia Care_ The Impact of Rising Housing Costs on Hamilton's Seniors.pdf" target="_blank">View Full Report (PDF)</a>
+      </div> 
+      <div class="highlight-section">
+        <h4>Why This Matters</h4>
+        <ul>
+          <li> Rents rose 50%+ in outer zones (2019–2023), pushing seniors to the edge.</li>
+          <li> Central wards have 5–10× more transit access than peripheral ones.</li>
+          <li> Healthcare deserts exist in wards 9, 11, and 15 — with near-zero access scores.</li>
+          <li> A negative correlation (R² = 0.27) between accessibility and senior vulnerability.</li>
+          <li> Isolation risks for seniors needing dementia care are growing rapidly in underserved areas.</li>
+        </ul>
+       </div>
+        <h4>Spatial Analysis Methods</h4>
+        <ul>
+          <li><strong>Population-weighted centroids</strong> used to anchor accessibility models for each ward.</li>
+          <li><strong>Isochrone analysis</strong> (400m, 600m, 800m walking; 5, 10, 15min transit) for bus stop and healthcare reach.</li>
+          <li><strong>Composite Vulnerability Score</strong> = 30% senior ratio + 30% renter rate + 20% rent burden + 20% LIM.</li>
+          <li><strong>Accessibility Score</strong> = 60% transit + 40% healthcare, normalized per ward.</li>
+          <li>Data from CMHC, OSM, Ontario GeoHub, City of Hamilton Open Data.</li>
+        </ul>
+
+        <h4>Spatial Results</h4>
+
+        <div class="result-block">
+          <h5>1. Central wards outperform others in combined transit & healthcare accessibility.</h5>
+          <p class="caption-text">Table summarizes calculated transit and healthcare accessibility scores, normalized to [0,1] scale per ward. Combined scores reveal strong geographic disparities.</p>
+          <img src="/assets/projects/docs/access_hamilton/accessibility_score.jpg" alt="Accessibility Score Table" />
+        </div>
+
+        <div class="result-block">
+          <h5>2. Transit access is concentrated in central neighborhoods; outer wards are underserved.</h5>
+          <p class="caption-text">400m, 600m, and 800m walking isochrones were generated from population-weighted centroids to assess proximity to bus stops across wards.</p>
+          <img src="/assets/projects/docs/access_hamilton/transit_access.png" alt="Transit Accessibility Isochrone Map" />
+        </div>
+
+        <div class="result-block">
+          <h5>3. Healthcare access via public transit sharply drops in peripheral wards like 9, 11, and 15.</h5>
+          <p class="caption-text">Transit-based isochrones illustrate disparities in reaching healthcare facilities within 5–15 minute ranges, emphasizing outer-ward inaccessibility.</p>
+          <img src="/assets/projects/docs/access_hamilton/health_access.png" alt="Healthcare Accessibility Isochrone Map" />
+        </div>
+
+        <div class="result-block">
+          <h5>4. High displacement vulnerability overlaps with low accessibility in outer wards (12, 13, 15).</h5>
+          <p class="caption-text">This bivariate choropleth overlays rent price change, vulnerability increase, and accessibility loss between census periods using natural breaks classification.</p>
+          <img src="/assets/projects/docs/access_hamilton/vulnerability_choropleth.png" alt="Reversed Accessibility and Vulnerability Change Map" />
+        </div>
+
+        <div class="result-block">
+          <h5>5. Statistical analysis shows a negative correlation between accessibility and vulnerability (R² = 0.27).</h5>
+          <p class="caption-text">Linear regression shows a statistically significant inverse relationship between accessibility scores and change in vulnerability (R² = 0.27).</p>
+          <img src="/assets/projects/docs/access_hamilton/vulnerability_scores.png" alt="Scatterplot Correlation R² = 0.27" />
+        </div>
+
+    </div>
+  </div>
+  <a href="/projects.html" class="btn btn-light rounded-circle back-to-gallery-btn" title="Back to Projects">
+    <i class="bi bi-house"></i>
+  </a>
+</body>
+</html>
